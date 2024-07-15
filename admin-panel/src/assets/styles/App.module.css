@@ -1,4 +1,5 @@
 @import url("../fonts/fonts.css");
 .container {
-  display: block;
+  background-color: #ebedef;
+  width: 100%;
 }/*# sourceMappingURL=App.module.css.map */
