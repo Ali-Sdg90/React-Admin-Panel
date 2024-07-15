@@ -93,7 +93,7 @@
                         width: 48px;
                         height: 100%;
                         box-sizing: border-box;
-                        background: url("../../assets/images/icons/username-icon.svg")
+                        background: url("../../assets/images/icons/login/username-icon.svg")
                                 center/16px no-repeat,
                             #9da5b1;
                         border: 1px solid #989898;
@@ -102,7 +102,7 @@
 
                 .passwordContainer {
                     &::after {
-                        background: url("../../assets/images/icons/password-icon.svg")
+                        background: url("../../assets/images/icons/login/password-icon.svg")
                                 center/23px no-repeat,
                             #9da5b1;
                     }
@@ -166,7 +166,7 @@
         height: 644px !important;
     }
 
-    .leftSide{
+    .leftSide {
         height: 50% !important;
         width: 100% !important;
     }

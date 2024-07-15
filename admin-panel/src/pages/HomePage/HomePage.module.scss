@@ -1,3 +1,136 @@
+@mixin background-styles {
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
+}
+
 .container {
-    display: block; // Temp
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    height: 100%;
+
+    .pageContent {
+        direction: rtl;
+
+        .quickAccessSection {
+            width: calc(100% - 60px);
+            // height: 307px;
+            border-radius: 8px;
+            background-color: white;
+            margin: 29px 32px 0;
+            padding: 24px 24px 32px;
+
+            .quickAccessHeader {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 34.55px;
+            }
+
+            .quickAccessBtns {
+                margin-top: 32px;
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+
+                // display: flex;
+                // flex-flow: row wrap;
+                // justify-content: center;
+                // align-items: center;
+
+                gap: 24px;
+
+                div {
+                    height: 80px;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-right: 72px;
+                    padding-left: 40px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 31.09px;
+                    color: white;
+                    position: relative;
+                    transition: transform 0.15s;
+                    cursor: pointer;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 31px;
+                        left: 25px;
+                        width: 10px;
+                        height: 18px;
+                        background: url("../../assets/images/icons/home-page/left-arrow-icon.svg")
+                            center/cover no-repeat;
+                    }
+
+                    &:hover {
+                        transform: scale(1.006);
+                    }
+
+                    &:active {
+                        transform: scale(0.995);
+                    }
+                }
+
+                .quickAccessBtn1 {
+                    background: url("../../assets/images/icons/home-page/quick-access-1.svg"),
+                        #1a5b92;
+                    @include background-styles;
+                }
+
+                .quickAccessBtn2 {
+                    background: url("../../assets/images/icons/home-page/quick-access-2.svg"),
+                        #16679a;
+                    @include background-styles;
+                }
+
+                .quickAccessBtn3 {
+                    background: url("../../assets/images/icons/home-page/quick-access-3.svg"),
+                        #0f80aa;
+                    @include background-styles;
+                }
+
+                .quickAccessBtn4 {
+                    background: url("../../assets/images/icons/home-page/quick-access-4.svg"),
+                        #0899ba;
+                    @include background-styles;
+                }
+
+                .quickAccessBtn5 {
+                    background: url("../../assets/images/icons/home-page/quick-access-5.svg"),
+                        #04a6c2;
+                    @include background-styles;
+                }
+
+                .quickAccessBtn6 {
+                    background: url("../../assets/images/icons/home-page/quick-access-6.svg"),
+                        #00b2ca;
+                    @include background-styles;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .quickAccessBtns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        gap: 14px !important;
+
+    }
+}
+
+@media (max-width: 965px) {
+    .quickAccessBtns {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+        gap: 10px !important;
+    }
 }

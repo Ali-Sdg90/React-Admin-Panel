@@ -1,3 +1,89 @@
 .container {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  height: 100%;
+}
+.container .pageContent {
+  direction: rtl;
+}
+.container .pageContent .quickAccessSection {
+  width: calc(100% - 60px);
+  height: 307px;
+  border-radius: 8px;
+  background-color: white;
+  margin: 29px 32px 0;
+  padding: 24px 24px 32px;
+}
+.container .pageContent .quickAccessSection .quickAccessHeader {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34.55px;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns div {
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 72px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 31.09px;
+  color: white;
+  position: relative;
+  transition: transform 0.15s;
+  cursor: pointer;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns div::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 25px;
+  width: 10px;
+  height: 18px;
+  background: url("../../assets/images/icons/home-page/left-arrow-icon.svg") center/cover no-repeat;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns div:hover {
+  transform: scale(1.006);
+}
+.container .pageContent .quickAccessSection .quickAccessBtns div:active {
+  transform: scale(0.995);
+}
+.container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn1 {
+  background: url("../../assets/images/icons/home-page/quick-access-1.svg"), #1a5b92;
+  background-position: calc(100% - 24px) center;
+  background-repeat: no-repeat;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn2 {
+  background: url("../../assets/images/icons/home-page/quick-access-2.svg"), #16679a;
+  background-position: calc(100% - 24px) center;
+  background-repeat: no-repeat;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn3 {
+  background: url("../../assets/images/icons/home-page/quick-access-3.svg"), #0f80aa;
+  background-position: calc(100% - 24px) center;
+  background-repeat: no-repeat;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn4 {
+  background: url("../../assets/images/icons/home-page/quick-access-4.svg"), #0899ba;
+  background-position: calc(100% - 24px) center;
+  background-repeat: no-repeat;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn5 {
+  background: url("../../assets/images/icons/home-page/quick-access-5.svg"), #04a6c2;
+  background-position: calc(100% - 24px) center;
+  background-repeat: no-repeat;
+}
+.container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn6 {
+  background: url("../../assets/images/icons/home-page/quick-access-6.svg"), #00b2ca;
+  background-position: calc(100% - 24px) center;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=HomePage.module.css.map */
