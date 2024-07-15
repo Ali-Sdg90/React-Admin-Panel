@@ -1,14 +1,45 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Style from "./Login.module.scss";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../store/AppProvider";
 
 const Login = () => {
+    const { localToken, setLocalToken } = useContext(AppContext);
+
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         username: "",
         password: "",
     });
 
-    const formSubmitHandler = (e) => {
+    const formSubmitHandler = async (e) => {
         e.preventDefault();
+
+        try {
+            const response = await axios.post(
+                "http://193.56.59.51:50004/admin/api/login",
+                {
+                    phone: formData.username,
+                    password: formData.password,
+                }
+            );
+            console.log("response >>", response);
+
+            if (response.data.ok) {
+                const saveData = {
+                    token: response.data.data.token,
+                    fullName: response.data.data.fullName,
+                };
+
+                setLocalToken(saveData);
+
+                navigate("/home-page");
+            }
+        } catch (err) {
+            console.log("ERROR >>", err);
+        }
 
         console.log("formData >>", formData);
     };
