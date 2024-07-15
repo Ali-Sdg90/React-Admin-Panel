@@ -1,11 +1,17 @@
+import React from "react";
+import AppProvider from "./store/AppProvider";
 import Style from "./assets/styles/App.module.scss";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 
-function App() {
+const App = () => {
     return (
-        <div className={Style.container}>
-            <h1>Aloha</h1>
-        </div>
+        <BrowserRouter>
+            <AppProvider>
+                <AppRoutes />
+            </AppProvider>
+        </BrowserRouter>
     );
-}
+};
 
 export default App;
