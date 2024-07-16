@@ -4,10 +4,7 @@
 }
 
 .container {
-    // display: grid;
-    // grid-template-columns: 1fr 270px;
     display: flex;
-    height: 100%;
 
     .pageContent {
         direction: rtl;
@@ -116,6 +113,140 @@
                     @include background-styles;
                 }
             }
+        }
+
+        .usersList {
+            width: calc(100% - 60px);
+            border-radius: 8px;
+            background-color: white;
+            margin: 32px;
+            padding-bottom: 48px;
+
+            .topSection {
+                padding: 24px 24px 32px;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #d9d9d9;
+
+                .sectionTitle {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 34.55px;
+                }
+
+                .addUserBtn {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 27.64px;
+                    cursor: pointer;
+                    color: white;
+                    font-family: IRANYekanFN;
+                    border-radius: 5px;
+                    padding: 10px 56px 10px 24px;
+                    border: none;
+                    background: url("../../assets/images/icons/home-page/add-user-icon.svg"),
+                        #321fdb;
+                    background-repeat: no-repeat;
+                    background-position: calc(100% - 24px);
+                    background-size: 23px;
+                    transition: background-color 0.15s;
+
+                    &:hover {
+                        background-color: #3521e6;
+                    }
+
+                    &:active {
+                        background-color: #301ed2;
+                    }
+                }
+            }
+
+            .userTable {
+                .filterItems {
+                    display: grid;
+                    grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
+                    gap: 0 17px;
+                    padding: 0 48px;
+                    border-bottom: 1px solid #d9d9d9;
+
+                    input {
+                        width: 100%;
+                        border-radius: 4px;
+                        border: 1px solid #707070;
+                        outline: none;
+                        height: 32px;
+                        padding: 3px 5px;
+                        margin: 12px 0;
+                    }
+
+                    div {
+                        background: url("../../assets/images/icons/home-page/swap-icon.svg");
+                        background-position: calc(100% - 8px) center;
+                        background-size: 24px;
+                        background-repeat: no-repeat;
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 24.18px;
+                        height: 48px;
+                        padding: 14px 38px 0 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    .filterFiller {
+                        background: none;
+                    }
+                }
+
+                .userList {
+                    .userRow {
+                        display: grid;
+                        grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
+                        grid-template-rows: 56px;
+                        padding: 0 48px;
+                        gap: 0 17px;
+                        border-bottom: 1px solid #d9d9d9;
+
+                        &:nth-child(odd) {
+                            background-color: #eeeeee;
+                        }
+
+                        div {
+                            padding-top: 14px;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+
+                        .userImg {
+                            width: 40px;
+                            height: 40px;
+                            padding-top: 0;
+                            margin-top: 8px;
+
+                            div {
+                                width: 100%;
+                                height: 100%;
+                                background: #d9d9d9;
+                                border-radius: 50%;
+                                flex-shrink: 0;
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tableNav {
+            margin: 43px auto 0;
+            width: 313px;
+            height: 40px;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
         }
     }
 }

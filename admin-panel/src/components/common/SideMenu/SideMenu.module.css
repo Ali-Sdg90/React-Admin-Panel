@@ -1,8 +1,11 @@
 .container {
-  height: 100%;
   background: #3c4b64;
   color: white;
   direction: rtl;
+  width: 270px;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: width 0.2s;
 }
 .container .menuTitle {
   font-size: 24px;
@@ -17,7 +20,9 @@
   background: url("../../../assets/images/biztak-logo.svg");
   background-repeat: no-repeat;
   background-size: 50px;
+  white-space: nowrap;
   background-position: calc(100% - 24px) center;
+  transition: background-position 0.15s, color 0.15s, padding-right 0.15s;
 }
 .container .menuItems div {
   width: 100%;
@@ -31,7 +36,8 @@
   justify-content: flex-start;
   align-items: center;
   padding-right: 64px;
-  transition: background-color 0.15s;
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
   cursor: pointer;
 }
 .container .menuItems div:hover {
@@ -116,4 +122,16 @@
   height: 16px;
   background-color: #313e53;
   display: block;
-}/*# sourceMappingURL=SideMenu.module.css.map */
+}
+
+.closeMenu {
+  width: 70px;
+}
+.closeMenu .menuTitle {
+  padding-right: 68px;
+  background-position: calc(100% - 10px) center;
+  color: transparent;
+}
+.closeMenu .menuItems div {
+  color: transparent;
+}/*# sourceMappingURL=sideMenu.module.css.map */

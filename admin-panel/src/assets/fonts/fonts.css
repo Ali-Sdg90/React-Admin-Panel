@@ -1,7 +1,7 @@
 @font-face {
     font-family: "IRANYekanFN";
     src: url("./IRANYekanFN.ttf") format("truetype");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -25,7 +25,7 @@
 @font-face {
     font-family: "IRANYekanFN";
     src: url("./IRANYekanFN-Bold.ttf") format("truetype");
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -33,7 +33,7 @@
 @font-face {
     font-family: "IRANYekanFN";
     src: url("./IRANYekanFN-ExtraBold.ttf") format("truetype");
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }

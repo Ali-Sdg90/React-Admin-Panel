@@ -1,14 +1,12 @@
 .container {
-  display: grid;
-  grid-template-columns: 1fr 270px;
-  height: 100%;
+  display: flex;
 }
 .container .pageContent {
   direction: rtl;
+  width: 100%;
 }
 .container .pageContent .quickAccessSection {
   width: calc(100% - 60px);
-  height: 307px;
   border-radius: 8px;
   background-color: white;
   margin: 29px 32px 0;
@@ -34,11 +32,14 @@
   justify-content: flex-start;
   align-items: center;
   padding-right: 72px;
+  padding-left: 40px;
   font-size: 18px;
   font-weight: 700;
   line-height: 31.09px;
   color: white;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
   transition: transform 0.15s;
   cursor: pointer;
 }
@@ -86,4 +87,150 @@
   background: url("../../assets/images/icons/home-page/quick-access-6.svg"), #00b2ca;
   background-position: calc(100% - 24px) center;
   background-repeat: no-repeat;
+}
+.container .pageContent .usersList {
+  width: calc(100% - 60px);
+  border-radius: 8px;
+  background-color: white;
+  margin: 32px;
+  padding-bottom: 48px;
+}
+.container .pageContent .usersList .topSection {
+  padding: 24px 24px 32px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+.container .pageContent .usersList .topSection .sectionTitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 34.55px;
+}
+.container .pageContent .usersList .topSection .addUserBtn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.64px;
+  cursor: pointer;
+  color: white;
+  font-family: IRANYekanFN;
+  border-radius: 5px;
+  padding: 10px 56px 10px 24px;
+  border: none;
+  background: url("../../assets/images/icons/home-page/add-user-icon.svg"), #321fdb;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 24px);
+  background-size: 23px;
+  transition: background-color 0.15s;
+}
+.container .pageContent .usersList .topSection .addUserBtn:hover {
+  background-color: #3521e6;
+}
+.container .pageContent .usersList .topSection .addUserBtn:active {
+  background-color: #301ed2;
+}
+.container .pageContent .usersList .userTable .filterItems {
+  display: grid;
+  grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
+  gap: 0 17px;
+  padding: 0 48px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.container .pageContent .usersList .userTable .filterItems input {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #707070;
+  outline: none;
+  height: 32px;
+  padding: 3px 5px;
+  margin: 12px 0;
+}
+.container .pageContent .usersList .userTable .filterItems div {
+  background: url("../../assets/images/icons/home-page/swap-icon.svg");
+  background-position: calc(100% - 8px) center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24.18px;
+  height: 48px;
+  padding: 14px 38px 0 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container .pageContent .usersList .userTable .filterItems .filterFiller {
+  background: none;
+}
+.container .pageContent .usersList .userTable .userList .userRow {
+  display: grid;
+  grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
+  grid-template-rows: 56px;
+  padding: 0 48px;
+  gap: 0 17px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.container .pageContent .usersList .userTable .userList .userRow:nth-child(odd) {
+  background-color: #eeeeee;
+}
+.container .pageContent .usersList .userTable .userList .userRow div {
+  padding-top: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container .pageContent .usersList .userTable .userList .userRow .userImg {
+  width: 40px;
+  height: 40px;
+  padding-top: 0;
+  margin-top: 8px;
+}
+.container .pageContent .usersList .userTable .userList .userRow .userImg div {
+  width: 100%;
+  height: 100%;
+  background: #d9d9d9;
+  border-radius: 50%;
+  flex-shrink: 0;
+  padding-top: 0;
+}
+.container .pageContent .tableNav {
+  margin: 43px auto 0;
+  width: 313px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+@media (max-width: 1435px) {
+  .container:not(.closeMenu) .quickAccessBtns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+@media (max-width: 1075px) {
+  .container:not(.closeMenu) .quickAccessBtns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(6, 1fr) !important;
+    gap: 10px !important;
+  }
+}
+@media (max-width: 1240px) {
+  .container.closeMenu .quickAccessBtns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+@media (max-width: 880px) {
+  .container.closeMenu .quickAccessBtns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(6, 1fr) !important;
+    gap: 10px !important;
+  }
 }/*# sourceMappingURL=HomePage.module.css.map */
