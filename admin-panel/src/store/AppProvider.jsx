@@ -9,8 +9,17 @@ const AppProvider = ({ children }) => {
         ""
     );
 
+    const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
+
     return (
-        <AppContext.Provider value={{ localToken, setLocalToken }}>
+        <AppContext.Provider
+            value={{
+                localToken,
+                setLocalToken,
+                isSideMenuOpen,
+                setIsSideMenuOpen,
+            }}
+        >
             {children}
         </AppContext.Provider>
     );

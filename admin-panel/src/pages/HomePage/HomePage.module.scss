@@ -4,12 +4,14 @@
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 270px;
+    // display: grid;
+    // grid-template-columns: 1fr 270px;
+    display: flex;
     height: 100%;
 
     .pageContent {
         direction: rtl;
+        width: 100%;
 
         .quickAccessSection {
             width: calc(100% - 60px);
@@ -53,6 +55,8 @@
                     line-height: 31.09px;
                     color: white;
                     position: relative;
+                    white-space: nowrap;
+                    overflow: hidden;
                     transition: transform 0.15s;
                     cursor: pointer;
 
@@ -116,21 +120,46 @@
     }
 }
 
-@media (max-width: 1230px) {
-    .quickAccessBtns {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-template-rows: repeat(3, 1fr) !important;
-        gap: 14px !important;
-
+@media (max-width: 1435px) {
+    .container:not(.closeMenu) {
+        .quickAccessBtns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+            gap: 14px !important;
+        }
     }
 }
 
-@media (max-width: 965px) {
-    .quickAccessBtns {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr) !important;
-        grid-template-rows: repeat(6, 1fr) !important;
-        gap: 10px !important;
+@media (max-width: 1075px) {
+    .container:not(.closeMenu) {
+        .quickAccessBtns {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-rows: repeat(6, 1fr) !important;
+            gap: 10px !important;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .container.closeMenu {
+        .quickAccessBtns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) !important;
+            grid-template-rows: repeat(3, 1fr) !important;
+            gap: 14px !important;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .container.closeMenu {
+        .quickAccessBtns {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr) !important;
+            grid-template-rows: repeat(6, 1fr) !important;
+            gap: 10px !important;
+        }
     }
 }

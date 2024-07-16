@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Style from "./SideMenu.module.scss";
+import { AppContext } from "../../../store/AppProvider";
 
 const SideMenu = () => {
+    const { isSideMenuOpen } = useContext(AppContext);
+
     return (
-        <div className={Style.container}>
+        <div
+            className={`${Style.container} ${
+                isSideMenuOpen && Style.closeMenu
+            }`}
+        >
             <div className={Style.menuTitle}>پنل مدیریت</div>
 
             <div className={Style.menuItems}>

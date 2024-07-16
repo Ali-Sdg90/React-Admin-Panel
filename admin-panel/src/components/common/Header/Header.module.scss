@@ -1,4 +1,47 @@
 .container {
     height: 64px;
     background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 40px;
+    direction: rtl;
+
+    .rightSection {
+        width: 30px;
+        height: 30px;
+        background: url("../../../assets/images/icons/header/menu-icon.svg")
+            center/24px no-repeat;
+        cursor: pointer;
+    }
+
+    .leftSection {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+
+        .userImg {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #d9d9d9;
+        }
+
+        .userName {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 27.64px;
+        }
+
+        .downArrow {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            background: url("../../../assets/images/icons/header/down-arrow-icon.svg")
+                center/cover no-repeat;
+        }
+    }
 }
