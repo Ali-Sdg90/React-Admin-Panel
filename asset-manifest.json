@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Admin-Panel/static/css/main.0e6d6808.css",
-    "main.js": "/React-Admin-Panel/static/js/main.70dda950.js",
+    "main.js": "/React-Admin-Panel/static/js/main.9a5a621a.js",
     "static/media/IRANYekanFN-Thin.ttf": "/React-Admin-Panel/static/media/IRANYekanFN-Thin.8848d9cd79e7afcc6afe.ttf",
     "static/media/IRANYekanFN-Light.ttf": "/React-Admin-Panel/static/media/IRANYekanFN-Light.69e0283b3565ef71d7c7.ttf",
     "static/media/IRANYekanFN.ttf": "/React-Admin-Panel/static/media/IRANYekanFN.c60f52a9c7ded0f426e5.ttf",
@@ -37,10 +37,10 @@
     "static/media/down-arrow-icon.svg": "/React-Admin-Panel/static/media/down-arrow-icon.70445adf0a40e9420c82.svg",
     "static/media/username-icon.svg": "/React-Admin-Panel/static/media/username-icon.f54bc12690682a3a9398.svg",
     "main.0e6d6808.css.map": "/React-Admin-Panel/static/css/main.0e6d6808.css.map",
-    "main.70dda950.js.map": "/React-Admin-Panel/static/js/main.70dda950.js.map"
+    "main.9a5a621a.js.map": "/React-Admin-Panel/static/js/main.9a5a621a.js.map"
   },
   "entrypoints": [
     "static/css/main.0e6d6808.css",
-    "static/js/main.70dda950.js"
+    "static/js/main.9a5a621a.js"
   ]
 }
