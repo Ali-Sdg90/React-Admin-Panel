@@ -1,3 +1,13 @@
 .container {
-    display: block; // Temp
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 37px;
+    width: 100%;
+    border-top: 1px solid #989898;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20.73px;
+    padding: 0 24px;
 }

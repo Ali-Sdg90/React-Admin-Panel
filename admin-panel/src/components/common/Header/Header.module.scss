@@ -7,10 +7,13 @@
     align-items: center;
     padding: 0 16px 0 40px;
     direction: rtl;
+    width: 100%;
+    transition: width 0.2s;
 
     .rightSection {
         width: 30px;
         height: 30px;
+        flex-shrink: 0;
         background: url("../../../assets/images/icons/header/menu-icon.svg")
             center/24px no-repeat;
         cursor: pointer;
@@ -34,6 +37,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 27.64px;
+            white-space: nowrap;
         }
 
         .downArrow {
@@ -43,5 +47,25 @@
             background: url("../../../assets/images/icons/header/down-arrow-icon.svg")
                 center/cover no-repeat;
         }
+    }
+}
+
+@media (max-width: 910px) {
+    .container.closeMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 70px) !important;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 910px) {
+    .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 270px) !important;
+        z-index: 10;
     }
 }

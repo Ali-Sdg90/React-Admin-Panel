@@ -27,12 +27,7 @@
 .container .pageContent .quickAccessSection .quickAccessBtns div {
   height: 80px;
   border-radius: 8px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  padding-right: 72px;
-  padding-left: 40px;
+  padding: 24px 72px 0 40px;
   font-size: 18px;
   font-weight: 700;
   line-height: 31.09px;
@@ -42,6 +37,9 @@
   overflow: hidden;
   transition: transform 0.15s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns div::after {
   content: "";
@@ -130,14 +128,20 @@
 .container .pageContent .usersList .topSection .addUserBtn:active {
   background-color: #301ed2;
 }
-.container .pageContent .usersList .userTable .filterItems {
+.container .pageContent .usersList .userTableContainer {
+  overflow-x: auto;
+}
+.container .pageContent .usersList .userTableContainer .userTable {
+  min-width: 560px;
+}
+.container .pageContent .usersList .userTableContainer .userTable .filterItems {
   display: grid;
   grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
   gap: 0 17px;
   padding: 0 48px;
   border-bottom: 1px solid #d9d9d9;
 }
-.container .pageContent .usersList .userTable .filterItems input {
+.container .pageContent .usersList .userTableContainer .userTable .filterItems input {
   width: 100%;
   border-radius: 4px;
   border: 1px solid #707070;
@@ -146,7 +150,7 @@
   padding: 3px 5px;
   margin: 12px 0;
 }
-.container .pageContent .usersList .userTable .filterItems div {
+.container .pageContent .usersList .userTableContainer .userTable .filterItems div {
   background: url("../../assets/images/icons/home-page/swap-icon.svg");
   background-position: calc(100% - 8px) center;
   background-size: 24px;
@@ -160,10 +164,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.container .pageContent .usersList .userTable .filterItems .filterFiller {
+.container .pageContent .usersList .userTableContainer .userTable .filterItems .filterFiller {
   background: none;
 }
-.container .pageContent .usersList .userTable .userList .userRow {
+.container .pageContent .usersList .userTableContainer .userTable .userList .userRow {
   display: grid;
   grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
   grid-template-rows: 56px;
@@ -171,22 +175,22 @@
   gap: 0 17px;
   border-bottom: 1px solid #d9d9d9;
 }
-.container .pageContent .usersList .userTable .userList .userRow:nth-child(odd) {
+.container .pageContent .usersList .userTableContainer .userTable .userList .userRow:nth-child(odd) {
   background-color: #eeeeee;
 }
-.container .pageContent .usersList .userTable .userList .userRow div {
+.container .pageContent .usersList .userTableContainer .userTable .userList .userRow div {
   padding-top: 14px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.container .pageContent .usersList .userTable .userList .userRow .userImg {
+.container .pageContent .usersList .userTableContainer .userTable .userList .userRow .userImg {
   width: 40px;
   height: 40px;
   padding-top: 0;
   margin-top: 8px;
 }
-.container .pageContent .usersList .userTable .userList .userRow .userImg div {
+.container .pageContent .usersList .userTableContainer .userTable .userList .userRow .userImg div {
   width: 100%;
   height: 100%;
   background: #d9d9d9;
@@ -204,7 +208,6 @@
 
 @media (max-width: 1435px) {
   .container:not(.closeMenu) .quickAccessBtns {
-    display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
     gap: 14px !important;
@@ -212,7 +215,6 @@
 }
 @media (max-width: 1075px) {
   .container:not(.closeMenu) .quickAccessBtns {
-    display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
     grid-template-rows: repeat(6, 1fr) !important;
     gap: 10px !important;
@@ -220,7 +222,6 @@
 }
 @media (max-width: 1240px) {
   .container.closeMenu .quickAccessBtns {
-    display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
     gap: 14px !important;
@@ -228,9 +229,59 @@
 }
 @media (max-width: 880px) {
   .container.closeMenu .quickAccessBtns {
-    display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
     grid-template-rows: repeat(6, 1fr) !important;
     gap: 10px !important;
+  }
+}
+@media (max-width: 1150px) {
+  .container:not(.closeMenu) .filterItems div {
+    background: none !important;
+    padding: 14px 5px 0 0 !important;
+  }
+}
+@media (max-width: 940px) {
+  .container:not(.closeMenu) .filterItems {
+    padding: 0 14px !important;
+    gap: 0 8px !important;
+  }
+  .container:not(.closeMenu) .userRow {
+    padding: 0 14px !important;
+    gap: 0 8px !important;
+  }
+}
+@media (max-width: 947px) {
+  .container.closeMenu .filterItems div {
+    background: none !important;
+    padding: 14px 5px 0 0 !important;
+  }
+}
+@media (max-width: 775px) {
+  .container.closeMenu .filterItems {
+    padding: 0 14px !important;
+    gap: 0 8px !important;
+  }
+  .container.closeMenu .userRow {
+    padding: 0 14px !important;
+    gap: 0 8px !important;
+  }
+}
+@media (max-width: 460px) {
+  .quickAccessBtns div {
+    font-size: 16px !important;
+    background-image: none !important;
+    padding-right: 16px !important;
+  }
+  .topSection div,
+  .topSection button {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 910px) {
+  .container {
+    margin-right: 70px !important;
+  }
+  .container .quickAccessSection {
+    margin-top: 93px !important;
   }
 }/*# sourceMappingURL=HomePage.module.css.map */

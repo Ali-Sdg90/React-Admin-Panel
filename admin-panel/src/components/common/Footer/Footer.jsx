@@ -4,7 +4,8 @@ import Style from "./Footer.module.scss";
 const Footer = () => {
     return (
         <div className={Style.container}>
-            <h1>Footer</h1>
+            <div className={Style.copyright}>بیزتاک © 1402</div>
+            <div className={Style.version}>نسخه 1.0.0</div>
         </div>
     );
 };

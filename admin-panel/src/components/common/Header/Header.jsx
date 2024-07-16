@@ -3,14 +3,19 @@ import Style from "./Header.module.scss";
 import { AppContext } from "./../../../store/AppProvider";
 
 const Header = () => {
-    const { localToken, setIsSideMenuOpen } = useContext(AppContext);
+    const { localToken, setIsSideMenuClose, isSideMenuClose } =
+        useContext(AppContext);
 
     const sideMenuHandler = () => {
-        setIsSideMenuOpen((prevState) => !prevState);
+        setIsSideMenuClose((prevState) => !prevState);
     };
 
     return (
-        <div className={Style.container}>
+        <div
+            className={`${Style.container} ${
+                isSideMenuClose && Style.closeMenu
+            }`}
+        >
             <div className={Style.rightSection} onClick={sideMenuHandler}></div>
 
             <div className={Style.leftSection}>

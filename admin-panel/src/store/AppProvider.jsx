@@ -9,15 +9,34 @@ const AppProvider = ({ children }) => {
         ""
     );
 
-    const [isSideMenuOpen, setIsSideMenuOpen] = useState(true);
+    const [isSideMenuClose, setIsSideMenuClose] = useState(true);
+    const [pageWidth, setPageWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 1075) {
+                // setIsSideMenuClose(false);
+            } else {
+                setIsSideMenuClose(true);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        handleResize();
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <AppContext.Provider
             value={{
                 localToken,
                 setLocalToken,
-                isSideMenuOpen,
-                setIsSideMenuOpen,
+                isSideMenuClose,
+                setIsSideMenuClose,
             }}
         >
             {children}

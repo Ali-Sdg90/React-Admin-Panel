@@ -6,8 +6,12 @@
   flex-shrink: 0;
   overflow: hidden;
   transition: width 0.2s;
+  overflow-y: auto;
 }
-.container .menuTitle {
+.container::-webkit-scrollbar {
+  width: 0;
+}
+.container .sideMenuContent .menuTitle {
   font-size: 24px;
   font-weight: 700;
   line-height: 41.45px;
@@ -24,7 +28,7 @@
   background-position: calc(100% - 24px) center;
   transition: background-position 0.15s, color 0.15s, padding-right 0.15s;
 }
-.container .menuItems div {
+.container .sideMenuContent .menuItems div {
   width: 100%;
   height: 66px;
   font-size: 16px;
@@ -40,85 +44,85 @@
   transition: background-color 0.15s, color 0.15s;
   cursor: pointer;
 }
-.container .menuItems div:hover {
+.container .sideMenuContent .menuItems div:hover {
   background-color: #36445b;
 }
-.container .menuItems div:active {
+.container .sideMenuContent .menuItems div:active {
   background-color: #334156;
 }
-.container .menuItems .menuItem1 {
+.container .sideMenuContent .menuItems .menuItem1 {
   background: url("../../../assets/images/icons/side-menu/side-menu-1.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem2 {
+.container .sideMenuContent .menuItems .menuItem2 {
   background: url("../../../assets/images/icons/side-menu/side-menu-2.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem3 {
+.container .sideMenuContent .menuItems .menuItem3 {
   background: url("../../../assets/images/icons/side-menu/side-menu-3.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem4 {
+.container .sideMenuContent .menuItems .menuItem4 {
   background: url("../../../assets/images/icons/side-menu/side-menu-4.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem5 {
+.container .sideMenuContent .menuItems .menuItem5 {
   background: url("../../../assets/images/icons/side-menu/side-menu-5.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem6 {
+.container .sideMenuContent .menuItems .menuItem6 {
   background: url("../../../assets/images/icons/side-menu/side-menu-6.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem7 {
+.container .sideMenuContent .menuItems .menuItem7 {
   background: url("../../../assets/images/icons/side-menu/side-menu-7.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem8 {
+.container .sideMenuContent .menuItems .menuItem8 {
   background: url("../../../assets/images/icons/side-menu/side-menu-8.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem9 {
+.container .sideMenuContent .menuItems .menuItem9 {
   background: url("../../../assets/images/icons/side-menu/side-menu-9.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem10 {
+.container .sideMenuContent .menuItems .menuItem10 {
   background: url("../../../assets/images/icons/side-menu/side-menu-10.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem11 {
+.container .sideMenuContent .menuItems .menuItem11 {
   background: url("../../../assets/images/icons/side-menu/side-menu-11.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuItem12 {
+.container .sideMenuContent .menuItems .menuItem12 {
   background: url("../../../assets/images/icons/side-menu/side-menu-12.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: calc(100% - 24px) center;
 }
-.container .menuItems .menuGap {
+.container .sideMenuContent .menuItems .menuGap {
   height: 16px;
   background-color: #313e53;
   display: block;
@@ -127,11 +131,19 @@
 .closeMenu {
   width: 70px;
 }
-.closeMenu .menuTitle {
+.closeMenu .sideMenuContent .menuTitle {
   padding-right: 68px;
   background-position: calc(100% - 10px) center;
   color: transparent;
 }
-.closeMenu .menuItems div {
+.closeMenu .sideMenuContent .menuItems div {
   color: transparent;
+}
+
+@media (max-width: 910px) {
+  .container {
+    position: fixed;
+    right: 0;
+    height: 100%;
+  }
 }/*# sourceMappingURL=sideMenu.module.css.map */

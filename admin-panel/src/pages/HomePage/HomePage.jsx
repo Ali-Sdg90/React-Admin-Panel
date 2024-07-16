@@ -5,9 +5,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import SideMenu from "../../components/common/SideMenu/SideMenu";
 import Header from "../../components/common/Header/Header";
+import Footer from "../../components/common/Footer/Footer";
 
 const HomePage = () => {
-    const { localToken, isSideMenuOpen } = useContext(AppContext);
+    const { localToken, isSideMenuClose } = useContext(AppContext);
 
     const [pageData, setPageData] = useState({});
     const [pageNumber, setPageNumber] = useState(1);
@@ -52,7 +53,7 @@ const HomePage = () => {
     return (
         <div
             className={`${Style.container} ${
-                isSideMenuOpen && Style.closeMenu
+                isSideMenuClose && Style.closeMenu
             }`}
         >
             <div className={Style.pageContent}>
@@ -87,27 +88,28 @@ const HomePage = () => {
                         <button className={Style.addUserBtn}>کاربر جدید</button>
                     </div>
 
-                    <div className={Style.userTable}>
-                        <div className={Style.filterItems}>
-                            <span></span>
-                            <div>نام و نام خانوادگی</div>
-                            <div>نام کاربری</div>
-                            <div>شماره موبایل</div>
-                            <div>وضعیت</div>
-                            <div>نوع پروفایل</div>
-                        </div>
+                    <div className={Style.userTableContainer}>
+                        <div className={Style.userTable}>
+                            <div className={Style.filterItems}>
+                                <span></span>
+                                <div>نام و نام خانوادگی</div>
+                                <div>نام کاربری</div>
+                                <div>شماره موبایل</div>
+                                <div>وضعیت</div>
+                                <div>نوع پروفایل</div>
+                            </div>
 
-                        <div className={Style.filterItems}>
-                            <span></span>
-                            <input type="text" autoComplete="none" />
-                            <input type="text" autoComplete="none" />
-                            <input type="text" autoComplete="none" />
-                            <input type="text" autoComplete="none" />
-                            <input type="text" autoComplete="none" />
-                        </div>
+                            <div className={Style.filterItems}>
+                                <span></span>
+                                <input type="text" autoComplete="none" />
+                                <input type="text" autoComplete="none" />
+                                <input type="text" autoComplete="none" />
+                                <input type="text" autoComplete="none" />
+                                <input type="text" autoComplete="none" />
+                            </div>
 
-                        <div className={Style.userList}>
-                            {/* <div className={Style.userRow}>
+                            <div className={Style.userList}>
+                                {/* <div className={Style.userRow}>
                                 <div className={Style.userImg}>
                                     <div></div>
                                 </div>
@@ -118,57 +120,80 @@ const HomePage = () => {
                                 <div>مشاور + مشاوره گیرنده</div>
                             </div> */}
 
-                            {Object.keys(pageData).length > 0 ? (
-                                pageData.users.map((userData, index) => {
-                                    if (
-                                        index < pageNumber * 10 &&
-                                        index > (pageNumber - 1) * 10
-                                    ) {
-                                        return (
-                                            <div
-                                                className={Style.userRow}
-                                                key={userData.index}
-                                            >
-                                                <div className={Style.userImg}>
+                                {Object.keys(pageData).length > 0 ? (
+                                    pageData.users.map((userData, index) => {
+                                        if (
+                                            index < pageNumber * 10 &&
+                                            index > (pageNumber - 1) * 10
+                                        ) {
+                                            return (
+                                                <div
+                                                    className={Style.userRow}
+                                                    key={userData.index}
+                                                >
                                                     <div
-                                                    // style={{
-                                                    //     background:
-                                                    //         userData.profileImage &&
-                                                    //         `url(${userData.profileImage})`,
-                                                    // }}
-                                                    ></div>
+                                                        className={
+                                                            Style.userImg
+                                                        }
+                                                    >
+                                                        <div
+                                                        // style={{
+                                                        //     background:
+                                                        //         userData.profileImage &&
+                                                        //         `url(${userData.profileImage})`,
+                                                        // }}
+                                                        ></div>
+                                                    </div>
+                                                    <div
+                                                        title={
+                                                            userData.fullName
+                                                        }
+                                                    >
+                                                        {userData.fullName}
+                                                    </div>
+                                                    <div
+                                                        title={
+                                                            userData.userName
+                                                        }
+                                                    >
+                                                        {userData.userName}
+                                                    </div>
+                                                    <div
+                                                        title={
+                                                            userData.phoneNumber
+                                                        }
+                                                    >
+                                                        {userData.phoneNumber}
+                                                    </div>
+                                                    <div
+                                                        title={
+                                                            userData.statusTitle
+                                                        }
+                                                    >
+                                                        {userData.statusTitle}
+                                                    </div>
+                                                    <div
+                                                        title={
+                                                            userData.userType
+                                                        }
+                                                    >
+                                                        {userData.userType}
+                                                    </div>
                                                 </div>
-                                                <div title={userData.fullName}>
-                                                    {userData.fullName}
-                                                </div>
-                                                <div title={userData.userName}>
-                                                    {userData.userName}
-                                                </div>
-                                                <div
-                                                    title={userData.phoneNumber}
-                                                >
-                                                    {userData.phoneNumber}
-                                                </div>
-                                                <div
-                                                    title={userData.statusTitle}
-                                                >
-                                                    {userData.statusTitle}
-                                                </div>
-                                                <div title={userData.userType}>
-                                                    {userData.userType}
-                                                </div>
-                                            </div>
-                                        );
-                                    }
-                                })
-                            ) : (
-                                <h1 dir="ltr">Loading...</h1>
-                            )}
+                                            );
+                                        }
+                                    })
+                                ) : (
+                                    <h1 dir="ltr">Loading...</h1>
+                                )}
+                            </div>
                         </div>
                     </div>
 
                     <div className={Style.tableNav}></div>
                 </div>
+
+                <Footer />
             </div>
             <SideMenu />
         </div>
