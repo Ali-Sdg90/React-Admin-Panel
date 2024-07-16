@@ -184,7 +184,15 @@ const HomePage = () => {
                                         }
                                     })
                                 ) : (
-                                    <h1 dir="ltr">Loading...</h1>
+                                    <h1
+                                        dir="ltr"
+                                        style={{
+                                            textAlign: "center",
+                                            marginTop: "20px",
+                                        }}
+                                    >
+                                        Loading...
+                                    </h1>
                                 )}
                             </div>
                         </div>

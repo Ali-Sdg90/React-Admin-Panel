@@ -17,7 +17,6 @@
         margin: 10px;
 
         .leftSide {
-            // width: 400px;
             width: min(50%, 400px);
             height: 100%;
             background: #3c4b64;
@@ -51,7 +50,7 @@
             .sectionHeader {
                 font-family: IRANYekanFN;
                 font-size: 36px;
-                font-weight: 500; // I don't have 700
+                font-weight: 500;
                 line-height: 62.18px;
                 color: black;
             }
@@ -111,7 +110,6 @@
         }
 
         .bottomSection {
-            // border: 1px solid red;
             width: 100%;
             display: flex;
             justify-content: space-between;

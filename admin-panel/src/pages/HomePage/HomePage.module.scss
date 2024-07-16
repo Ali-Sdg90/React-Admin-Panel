@@ -12,7 +12,6 @@
 
         .quickAccessSection {
             width: calc(100% - 60px);
-            // height: 307px;
             border-radius: 8px;
             background-color: white;
             margin: 29px 32px 0;
@@ -26,16 +25,9 @@
 
             .quickAccessBtns {
                 margin-top: 32px;
-
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(2, 1fr);
-
-                // display: flex;
-                // flex-flow: row wrap;
-                // justify-content: center;
-                // align-items: center;
-
                 gap: 24px;
 
                 div {
@@ -248,6 +240,7 @@
         .tableNav {
             margin: 43px auto 0;
             width: 313px;
+            width: min(313px, 80%);
             height: 40px;
             border: 1px solid #d9d9d9;
             border-radius: 8px;
@@ -255,7 +248,7 @@
     }
 }
 
-// Side Menu 1
+// Side Menu Open
 
 @media (max-width: 1435px) {
     .container:not(.closeMenu) {
@@ -277,7 +270,7 @@
     }
 }
 
-// Side Menu 2
+// Side Menu Close
 
 @media (max-width: 1240px) {
     .container.closeMenu {
@@ -299,7 +292,7 @@
     }
 }
 
-// Users Table 1
+// Users Table Open
 
 @media (max-width: 1150px) {
     .container:not(.closeMenu) {
@@ -326,7 +319,7 @@
     }
 }
 
-// Users Table 2
+// Users Table Close
 
 @media (max-width: 947px) {
     .container.closeMenu {
@@ -353,29 +346,67 @@
     }
 }
 
-@media (max-width: 460px) {
-    .quickAccessBtns {
-        div {
-            font-size: 16px !important;
-            background-image: none !important;
-            padding-right: 16px !important;
-        }
-    }
-
-    .topSection {
-        div,
-        button {
-            font-size: 14px !important;
-        }
-    }
-}
+// Fixed Side Menu
 
 @media (max-width: 910px) {
     .container {
         margin-right: 70px !important;
 
-        .quickAccessSection{
+        .quickAccessSection {
             margin-top: 93px !important;
+        }
+    }
+}
+
+// Smaller HomePage Elements
+
+@media (max-width: 480px) {
+    .container {
+        .quickAccessSection {
+            padding: 12px 12px 16px !important;
+            margin: 82px 15px 0 !important;
+            width: calc(100% - 30px) !important;
+
+            .quickAccessHeader {
+                font-size: 16px !important;
+            }
+
+            .quickAccessBtns {
+                div {
+                    font-size: 14px !important;
+                    background-image: none !important;
+                    padding-right: 16px !important;
+                    padding-top: 14px !important;
+                    height: 60px !important;
+
+                    &::after {
+                        top: 23px !important;
+                    }
+                }
+            }
+        }
+
+        .usersList {
+            width: calc(100% - 30px) !important;
+            padding-bottom: 20px !important;
+            margin: 16px !important;
+
+            .topSection {
+                padding: 12px 12px 16px !important;
+                div,
+                button {
+                    font-size: 16px !important;
+                }
+            }
+
+            .addUserBtn {
+                background-image: none !important;
+                padding: 8px 18px !important;
+            }
+
+            .tableNav {
+                margin-top: 20px !important;
+            }
         }
     }
 }

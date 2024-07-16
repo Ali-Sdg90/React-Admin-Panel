@@ -10,13 +10,10 @@ const AppProvider = ({ children }) => {
     );
 
     const [isSideMenuClose, setIsSideMenuClose] = useState(true);
-    const [pageWidth, setPageWidth] = useState(window.innerWidth);
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 1075) {
-                // setIsSideMenuClose(false);
-            } else {
+            if (window.innerWidth < 1075) {
                 setIsSideMenuClose(true);
             }
         };
