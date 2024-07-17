@@ -33,9 +33,11 @@ const Login = () => {
                     fullName: response.data.data.fullName,
                 };
 
+                // console.log(response.data);
+
                 setLocalToken(saveData);
 
-                navigate("/home-page");
+                navigate("/React-Admin-Panel/home-page");
             }
         } catch (err) {
             console.log("ERROR >>", err);

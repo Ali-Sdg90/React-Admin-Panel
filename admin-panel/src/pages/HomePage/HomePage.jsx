@@ -36,7 +36,7 @@ const HomePage = () => {
                         }
                     );
 
-                    console.log("DATA: ", response.data.data);
+                    // console.log("DATA: ", response.data.data);
 
                     setPageData(response.data.data);
                 } catch (err) {
@@ -129,7 +129,7 @@ const HomePage = () => {
                                             return (
                                                 <div
                                                     className={Style.userRow}
-                                                    key={userData.index}
+                                                    key={userData._id}
                                                 >
                                                     <div
                                                         className={

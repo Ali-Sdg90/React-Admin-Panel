@@ -9,11 +9,24 @@ const AppRoutes = () => {
     return (
         <div>
             <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/home-page" element={<HomePage />} />
-                <Route path="/user-profile" element={<UserProfile />} />
-                <Route path="/" element={<Navigate to="/login" replace />} />
-                <Route path="*" element={<PageNotFound />} />
+                <Route path="React-Admin-Panel/login" element={<Login />} />
+                <Route
+                    path="React-Admin-Panel/home-page"
+                    element={<HomePage />}
+                />
+                <Route
+                    path="React-Admin-Panel/user-profile"
+                    element={<UserProfile />}
+                />
+                <Route
+                    path="/"
+                    element={<Navigate to="React-Admin-Panel/login" replace />}
+                />
+                <Route
+                    path="/React-Admin-Panel"
+                    element={<Navigate to="React-Admin-Panel/login" replace />}
+                />
+                <Route path="/*" element={<PageNotFound />} />
             </Routes>
         </div>
     );

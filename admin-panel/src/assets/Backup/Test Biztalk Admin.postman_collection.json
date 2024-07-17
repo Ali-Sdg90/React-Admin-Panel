@@ -1,0 +1,235 @@
+{
+    "info": {
+        "_postman_id": "32546cbf-7abd-4ce6-b65b-b0b191a9066a",
+        "name": "Test Biztalk Admin",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "17290205",
+        "_collection_link": "https://biztalkteam.postman.co/workspace/BizTalk~297967f7-a5bf-42c8-82a2-7100c6c69cca/collection/17290205-32546cbf-7abd-4ce6-b65b-b0b191a9066a?action=share&source=collection_link&creator=17290205"
+    },
+    "item": [
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "Authentication",
+                    "item": [
+                        {
+                            "name": "Login",
+                            "event": [
+                                {
+                                    "listen": "test",
+                                    "script": {
+                                        "exec": [
+                                            "const res = JSON.parse(responseBody)",
+                                            "",
+                                            "if (res.data && res.data.token) {",
+                                            "    pm.collectionVariables.set(\"admin_token\", res.data.token);",
+                                            "}"
+                                        ],
+                                        "type": "text/javascript",
+                                        "packages": {}
+                                    }
+                                }
+                            ],
+                            "request": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json",
+                                        "type": "text"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"phone\": \"09039618333\",\n    \"password\": \"1234\"\n\n}"
+                                },
+                                "url": {
+                                    "raw": "{{BaseUrl}}/admin/api/login",
+                                    "host": ["{{BaseUrl}}"],
+                                    "path": ["admin", "api", "login"]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Home",
+                    "item": [
+                        {
+                            "name": "Get Users",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{BaseUrl}}/admin/api/home/users?page=1&sortField=fullName&sortOrder=-1&status=ACTIVE",
+                                    "host": ["{{BaseUrl}}"],
+                                    "path": ["admin", "api", "home", "users"],
+                                    "query": [
+                                        {
+                                            "key": "page",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "key": "search",
+                                            "value": "علی",
+                                            "disabled": true
+                                        },
+                                        {
+                                            "key": "sortField",
+                                            "value": "fullName",
+                                            "description": "fullName/userName/createdAt"
+                                        },
+                                        {
+                                            "key": "sortOrder",
+                                            "value": "-1",
+                                            "description": "1/-1"
+                                        },
+                                        {
+                                            "key": "status",
+                                            "value": "ACTIVE",
+                                            "description": "ACTIVE/DE_ACTIVE"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Profile",
+                    "item": [
+                        {
+                            "name": "Get User Profile",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{BaseUrl}}/admin/api/profile/getUserProfile/66546d0435d88af3de7b2f97",
+                                    "host": ["{{BaseUrl}}"],
+                                    "path": [
+                                        "admin",
+                                        "api",
+                                        "profile",
+                                        "getUserProfile",
+                                        "66546d0435d88af3de7b2f97"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": [
+                    {
+                        "key": "token",
+                        "value": "{{admin_token}}",
+                        "type": "string"
+                    }
+                ]
+            },
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [""]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [""]
+                    }
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "value",
+                "value": "{{auth_key}}",
+                "type": "string"
+            },
+            {
+                "key": "key",
+                "value": "x-api-key",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "auth_key",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTI2MzFkYjc1MjlmODQ3NDk2Y2Y1NmYiLCJpYXQiOjE2OTgwNjA1MzAsImV4cCI6MTcwMTY2MDUzMH0.dzkBQanNCGZTM719RF0GkYapV4bBSPH455QA3-xk0m4"
+        },
+        {
+            "key": "BaseUrl",
+            "value": "http://193.56.59.51:50004"
+        },
+        {
+            "key": "ExternalApi",
+            "value": "217.170.254.172:1518"
+        },
+        {
+            "key": "admin_token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjA5MTk0ODIzODU5IiwiYWRtaW4iOnRydWUsImlhdCI6MTY0NTk0MTU5Nn0.Rle4NkBNDHvDQXBdPdB2xa9cUwxCCZqUxIAkDzpOGE4"
+        },
+        {
+            "key": "userId",
+            "value": ""
+        },
+        {
+            "key": "zibalAuth",
+            "value": "25ac89d2972346aba400f2fd9d4cd06e"
+        },
+        {
+            "key": "mobile",
+            "value": "09125776973"
+        },
+        {
+            "key": "callBackUrl",
+            "value": "https://api.bizztalk.ir/verify"
+        },
+        {
+            "key": "walletMerchent",
+            "value": "61de7def18f93452b4815e62"
+        },
+        {
+            "key": "walletId",
+            "value": "1310356"
+        },
+        {
+            "key": "subMerchent",
+            "value": "HzX3pf"
+        },
+        {
+            "key": "trackId",
+            "value": "2906673708"
+        }
+    ]
+}
