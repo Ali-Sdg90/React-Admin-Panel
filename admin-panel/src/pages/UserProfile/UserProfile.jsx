@@ -16,11 +16,11 @@ const UserProfile = () => {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        console.log("localToken >>", localToken);
+    const [isRecipientAdvisor, setIsRecipientAdvisor] = useState(false);
 
+    useEffect(() => {
         const fetchData = async () => {
-            if (localToken.token) {
+            if (localToken.token && userId) {
                 try {
                     const response = await axios.get(
                         "http://193.56.59.51:50004/admin/api/home/users",
@@ -37,11 +37,21 @@ const UserProfile = () => {
                         }
                     );
 
-                    // console.log("DATA: ", response.data.data);
+                    console.log("DATA: ", response.data.data);
 
-                    setPageData(response.data.data);
+                    const userData = response.data.data.users.filter(
+                        (member) => member._id === userId
+                    );
+
+                    if (!userData[0]) {
+                        throw new Error("Invalid User ID");
+                    }
+
+                    console.log("userData >>", userData[0]);
+                    setPageData(userData[0]);
                 } catch (err) {
                     console.log("ERROR >>", err);
+                    navigate("/React-Admin-Panel/page-not-found");
                 }
             } else {
                 navigate("/React-Admin-Panel/login");
@@ -49,7 +59,7 @@ const UserProfile = () => {
         };
 
         fetchData();
-    }, [localToken]);
+    }, [localToken, userId]);
 
     return (
         <div
@@ -63,26 +73,50 @@ const UserProfile = () => {
                     <div className={Style.userInfo}>
                         <div className={Style.topSection}>
                             <div className={Style.rightSection}>
-                                <div className={Style.userImg}></div>
-                                <div className={Style.userDetails}>
-                                    <div className={Style.userName}>
-                                        علی آسیابچی
-                                    </div>
-                                    <div className={Style.userDetailsRow}>
-                                        <div className={Style.userDetail1}>
-                                            مشاور
+                                {Object.keys(pageData).length ? (
+                                    <>
+                                        <div className={Style.userImg}></div>
+                                        <div className={Style.userDetails}>
+                                            <div className={Style.userName}>
+                                                {pageData.fullName}
+                                            </div>
+                                            <div
+                                                className={Style.userDetailsRow}
+                                            >
+                                                <div
+                                                    className={
+                                                        Style.userDetail1
+                                                    }
+                                                >
+                                                    {pageData.userType}
+                                                </div>
+                                                <div
+                                                    className={
+                                                        Style.userDetail2
+                                                    }
+                                                >
+                                                    {pageData.userName}
+                                                </div>
+                                                <div
+                                                    className={
+                                                        Style.userDetail3
+                                                    }
+                                                >
+                                                    مدیر محصول
+                                                </div>
+                                                <div
+                                                    className={
+                                                        Style.userDetail4
+                                                    }
+                                                >
+                                                    {pageData.phoneNumber}
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className={Style.userDetail2}>
-                                            ma.asiabchi
-                                        </div>
-                                        <div className={Style.userDetail3}>
-                                            مدیر محصول
-                                        </div>
-                                        <div className={Style.userDetail4}>
-                                            09120148529
-                                        </div>
-                                    </div>
-                                </div>
+                                    </>
+                                ) : (
+                                    <h2 style={{ height: "104px" }}>Loading</h2>
+                                )}
                             </div>
 
                             <div className={Style.leftSection}>
@@ -96,10 +130,30 @@ const UserProfile = () => {
                         </div>
 
                         <div className={Style.profileSwitch}>
-                            <div className={Style.profileActive}>
+                            <div
+                                className={
+                                    isRecipientAdvisor && Style.profileActive
+                                }
+                                onClick={() =>
+                                    setIsRecipientAdvisor(
+                                        (prevState) => !prevState
+                                    )
+                                }
+                            >
                                 پروفایل مشاور
                             </div>
-                            <div>پروفایل مشاور گیرنده</div>
+                            <div
+                                className={
+                                    !isRecipientAdvisor && Style.profileActive
+                                }
+                                onClick={() =>
+                                    setIsRecipientAdvisor(
+                                        (prevState) => !prevState
+                                    )
+                                }
+                            >
+                                پروفایل مشاور گیرنده
+                            </div>
                         </div>
                     </div>
 
