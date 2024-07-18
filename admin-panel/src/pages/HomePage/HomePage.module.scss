@@ -39,8 +39,6 @@
                     line-height: 31.09px;
                     color: white;
                     position: relative;
-                    white-space: nowrap;
-                    overflow: hidden;
                     transition: transform 0.15s;
                     cursor: pointer;
                     white-space: nowrap;
@@ -198,6 +196,7 @@
 
                     .userList {
                         .userRow {
+                            cursor: pointer;
                             display: grid;
                             grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
                             grid-template-rows: 56px;

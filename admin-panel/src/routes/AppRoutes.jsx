@@ -17,7 +17,7 @@ const AppRoutes = () => {
                     element={<HomePage />}
                 />
                 <Route
-                    path="React-Admin-Panel/user-profile/*"
+                    path="React-Admin-Panel/user-profile/:userId"
                     element={<UserProfile />}
                 />
                 <Route
