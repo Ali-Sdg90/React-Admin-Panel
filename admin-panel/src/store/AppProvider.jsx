@@ -10,6 +10,10 @@ const AppProvider = ({ children }) => {
     );
 
     const [isSideMenuClose, setIsSideMenuClose] = useState(true);
+    const [toastifyObj, setToastifyObj] = useState({
+        title: "",
+        mode: "",
+    });
 
     useEffect(() => {
         const handleResize = () => {
@@ -34,6 +38,8 @@ const AppProvider = ({ children }) => {
                 setLocalToken,
                 isSideMenuClose,
                 setIsSideMenuClose,
+                toastifyObj,
+                setToastifyObj,
             }}
         >
             {children}

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../store/AppProvider";
 
 const Login = () => {
-    const { localToken, setLocalToken } = useContext(AppContext);
+    const { setLocalToken, setToastifyObj } = useContext(AppContext);
 
     const navigate = useNavigate();
 
@@ -38,9 +38,19 @@ const Login = () => {
                 setLocalToken(saveData);
 
                 navigate("/React-Admin-Panel/home-page");
+
+                setToastifyObj({
+                    title: "Login Successful",
+                    mode: "success",
+                });
             }
         } catch (err) {
             console.log("ERROR >>", err);
+
+            setToastifyObj({
+                title: "Wrong Username/Password",
+                mode: "error",
+            });
         }
 
         console.log("formData >>", formData);

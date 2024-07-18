@@ -43,12 +43,16 @@ const HomePage = () => {
                     console.log("ERROR >>", err);
                 }
             } else {
-                navigate("/login");
+                navigate("/React-Admin-Panel/login");
             }
         };
 
         fetchData();
     }, [localToken]);
+
+    const userClickHAndler = (id) => {
+        navigate(`/React-Admin-Panel/user-profile/${id}`);
+    };
 
     return (
         <div
@@ -130,6 +134,11 @@ const HomePage = () => {
                                                 <div
                                                     className={Style.userRow}
                                                     key={userData._id}
+                                                    onClick={() =>
+                                                        userClickHAndler(
+                                                            userData._id
+                                                        )
+                                                    }
                                                 >
                                                     <div
                                                         className={

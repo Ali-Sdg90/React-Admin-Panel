@@ -3,11 +3,21 @@ import Style from "./Header.module.scss";
 import { AppContext } from "./../../../store/AppProvider";
 
 const Header = () => {
-    const { localToken, setIsSideMenuClose, isSideMenuClose } =
-        useContext(AppContext);
+    const {
+        localToken,
+        setIsSideMenuClose,
+        isSideMenuClose,
+        setLocalToken,
+        setToastifyObj,
+    } = useContext(AppContext);
 
     const sideMenuHandler = () => {
         setIsSideMenuClose((prevState) => !prevState);
+    };
+
+    const logoutHandler = () => {
+        setToastifyObj({ title: "Logout Successful", mode: "success" });
+        setLocalToken("");
     };
 
     return (
@@ -20,7 +30,9 @@ const Header = () => {
 
             <div className={Style.leftSection}>
                 <div className={Style.downArrow}></div>
-                <div className={Style.userName}>{localToken.fullName}</div>
+                <div className={Style.userName} onClick={logoutHandler}>
+                    {localToken.fullName}
+                </div>
                 <div></div>
                 <div className={Style.userImg}></div>
             </div>
