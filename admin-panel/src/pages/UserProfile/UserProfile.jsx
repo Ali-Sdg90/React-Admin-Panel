@@ -51,10 +51,10 @@ const UserProfile = () => {
                     setPageData(userData[0]);
                 } catch (err) {
                     console.log("ERROR >>", err);
-                    navigate("/React-Admin-Panel/page-not-found");
+                    navigate("/page-not-found");
                 }
             } else {
-                navigate("/React-Admin-Panel/login");
+                navigate("/login");
             }
         };
 

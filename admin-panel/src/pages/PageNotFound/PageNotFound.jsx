@@ -10,7 +10,7 @@ const PageNotFound = () => {
             <h1>Page Not Found</h1>
             <button
                 onClick={() => {
-                    navigate("/React-Admin-Panel/login");
+                    navigate("/login");
                 }}
             >
                 Go To Login Page

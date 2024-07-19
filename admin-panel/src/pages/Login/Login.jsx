@@ -37,7 +37,7 @@ const Login = () => {
 
                 setLocalToken(saveData);
 
-                navigate("/React-Admin-Panel/home-page");
+                navigate("/home-page");
 
                 setToastifyObj({
                     title: "Login Successful",

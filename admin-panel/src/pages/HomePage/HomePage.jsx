@@ -58,7 +58,7 @@ const HomePage = () => {
                     console.log("ERROR >>", err);
                 }
             } else {
-                navigate("/React-Admin-Panel/login");
+                navigate("/login");
             }
         };
 
@@ -66,7 +66,7 @@ const HomePage = () => {
     }, [localToken]);
 
     const userClickHAndler = (id) => {
-        navigate(`/React-Admin-Panel/user-profile/${id}`);
+        navigate(`/user-profile/${id}`);
     };
 
     const searchUser = (e, mode) => {

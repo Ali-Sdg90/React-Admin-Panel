@@ -13,33 +13,12 @@ const AppRoutes = () => {
             <Toastify />
             <ScrollToTop />
             <Routes>
-                <Route path="React-Admin-Panel/login" element={<Login />} />
-                <Route
-                    path="React-Admin-Panel/home-page"
-                    element={<HomePage />}
-                />
-                <Route
-                    path="React-Admin-Panel/user-profile/:userId"
-                    element={<UserProfile />}
-                />
-                <Route
-                    path="/"
-                    element={<Navigate to="/React-Admin-Panel/login" replace />}
-                />
-                <Route
-                    path="/React-Admin-Panel"
-                    element={<Navigate to="/React-Admin-Panel/login" replace />}
-                />
-                <Route
-                    path="/React-Admin-Panel/page-not-found"
-                    element={<PageNotFound />}
-                />
-                <Route
-                    path="*"
-                    element={
-                        <Navigate to="/React-Admin-Panel/page-not-found" />
-                    }
-                />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home-page" element={<HomePage />} />
+                <Route path="/user-profile/:userId" element={<UserProfile />} />
+                <Route path="/" element={<Navigate to="/login" replace />} />
+                <Route path="/page-not-found" element={<PageNotFound />} />
+                <Route path="*" element={<Navigate to="/page-not-found" />} />
             </Routes>
         </div>
     );
