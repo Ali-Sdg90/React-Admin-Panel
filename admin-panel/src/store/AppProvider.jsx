@@ -5,7 +5,7 @@ export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
     const [localToken, setLocalToken] = useLocalStorage(
-        "biztak_token_demo",
+        "biztalk_token_demo",
         ""
     );
 

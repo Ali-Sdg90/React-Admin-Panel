@@ -1,149 +1,149 @@
 .container {
-  background: #3c4b64;
-  color: white;
-  direction: rtl;
-  width: 270px;
-  flex-shrink: 0;
-  overflow: hidden;
-  transition: width 0.2s;
-  overflow-y: auto;
+    background: #3c4b64;
+    color: white;
+    direction: rtl;
+    width: 270px;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.2s;
+    overflow-y: auto;
 }
 .container::-webkit-scrollbar {
-  width: 0;
+    width: 0;
 }
 .container .sideMenuContent .menuTitle {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 41.45px;
-  padding-right: 82px;
-  height: 114px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  background: url("../../../assets/images/biztak-logo.svg");
-  background-repeat: no-repeat;
-  background-size: 50px;
-  white-space: nowrap;
-  background-position: calc(100% - 24px) center;
-  transition: background-position 0.15s, color 0.15s, padding-right 0.15s;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 41.45px;
+    padding-right: 82px;
+    height: 114px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: url("../../../assets/images/biztalk-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    white-space: nowrap;
+    background-position: calc(100% - 24px) center;
+    transition: background-position 0.15s, color 0.15s, padding-right 0.15s;
 }
 .container .sideMenuContent .menuItems div {
-  width: 100%;
-  height: 66px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 27.64px;
-  border-bottom: 1px solid #313e53;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  padding-right: 64px;
-  white-space: nowrap;
-  transition: background-color 0.15s, color 0.15s;
-  cursor: pointer;
+    width: 100%;
+    height: 66px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.64px;
+    border-bottom: 1px solid #313e53;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 64px;
+    white-space: nowrap;
+    transition: background-color 0.15s, color 0.15s;
+    cursor: pointer;
 }
 .container .sideMenuContent .menuItems div:hover {
-  background-color: #36445b;
+    background-color: #36445b;
 }
 .container .sideMenuContent .menuItems div:active {
-  background-color: #334156;
+    background-color: #334156;
 }
 .container .sideMenuContent .menuItems .menuItem1 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-1.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-1.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem2 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-2.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-2.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem3 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-3.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-3.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem4 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-4.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-4.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem5 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-5.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-5.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem6 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-6.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-6.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem7 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-7.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-7.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem8 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-8.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-8.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem9 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-9.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-9.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem10 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-10.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-10.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem11 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-11.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-11.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuItem12 {
-  background: url("../../../assets/images/icons/side-menu/side-menu-12.svg");
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: calc(100% - 24px) center;
+    background: url("../../../assets/images/icons/side-menu/side-menu-12.svg");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 24px) center;
 }
 .container .sideMenuContent .menuItems .menuGap {
-  height: 16px;
-  background-color: #313e53;
-  display: block;
+    height: 16px;
+    background-color: #313e53;
+    display: block;
 }
 
 .closeMenu {
-  width: 70px;
+    width: 70px;
 }
 .closeMenu .sideMenuContent .menuTitle {
-  padding-right: 68px;
-  background-position: calc(100% - 10px) center;
-  color: transparent;
+    padding-right: 68px;
+    background-position: calc(100% - 10px) center;
+    color: transparent;
 }
 .closeMenu .sideMenuContent .menuItems div {
-  color: transparent;
+    color: transparent;
 }
 
-@media (max-width: 910px) {
-  .container {
-    position: fixed;
-    right: 0;
-    height: 100%;
-  }
-}/*# sourceMappingURL=sideMenu.module.css.map */
+@media (max-width: 1100px) {
+    .container {
+        position: fixed;
+        right: 0;
+        height: 100%;
+    }
+} /*# sourceMappingURL=sideMenu.module.css.map */

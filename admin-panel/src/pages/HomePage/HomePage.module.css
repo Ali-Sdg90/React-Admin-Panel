@@ -1,316 +1,376 @@
 .container {
-  display: flex;
+    display: flex;
 }
 .container .pageContent {
-  direction: rtl;
-  width: 100%;
+    direction: rtl;
+    width: 100%;
 }
 .container .pageContent .quickAccessSection {
-  width: calc(100% - 60px);
-  border-radius: 8px;
-  background-color: white;
-  margin: 29px 32px 0;
-  padding: 24px 24px 32px;
+    width: calc(100% - 60px);
+    border-radius: 8px;
+    background-color: white;
+    margin: 29px 32px 0;
+    padding: 24px 24px 32px;
 }
 .container .pageContent .quickAccessSection .quickAccessHeader {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 34.55px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34.55px;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 24px;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns div {
-  height: 80px;
-  border-radius: 8px;
-  padding: 24px 72px 0 40px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 31.09px;
-  color: white;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: transform 0.15s;
-  cursor: pointer;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    height: 80px;
+    border-radius: 8px;
+    padding: 24px 72px 0 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 31.09px;
+    color: white;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: transform 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns div::after {
-  content: "";
-  position: absolute;
-  top: 31px;
-  left: 25px;
-  width: 10px;
-  height: 18px;
-  background: url("../../assets/images/icons/home-page/left-arrow-icon.svg") center/cover no-repeat;
+    content: "";
+    position: absolute;
+    top: 31px;
+    left: 25px;
+    width: 10px;
+    height: 18px;
+    background: url("../../assets/images/icons/home-page/left-arrow-icon.svg")
+        center/cover no-repeat;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns div:hover {
-  transform: scale(1.006);
+    transform: scale(1.006);
 }
 .container .pageContent .quickAccessSection .quickAccessBtns div:active {
-  transform: scale(0.995);
+    transform: scale(0.995);
 }
 .container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn1 {
-  background: url("../../assets/images/icons/home-page/quick-access-1.svg"), #1a5b92;
-  background-position: calc(100% - 24px) center;
-  background-repeat: no-repeat;
+    background: url("../../assets/images/icons/home-page/quick-access-1.svg"),
+        #1a5b92;
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn2 {
-  background: url("../../assets/images/icons/home-page/quick-access-2.svg"), #16679a;
-  background-position: calc(100% - 24px) center;
-  background-repeat: no-repeat;
+    background: url("../../assets/images/icons/home-page/quick-access-2.svg"),
+        #16679a;
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn3 {
-  background: url("../../assets/images/icons/home-page/quick-access-3.svg"), #0f80aa;
-  background-position: calc(100% - 24px) center;
-  background-repeat: no-repeat;
+    background: url("../../assets/images/icons/home-page/quick-access-3.svg"),
+        #0f80aa;
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn4 {
-  background: url("../../assets/images/icons/home-page/quick-access-4.svg"), #0899ba;
-  background-position: calc(100% - 24px) center;
-  background-repeat: no-repeat;
+    background: url("../../assets/images/icons/home-page/quick-access-4.svg"),
+        #0899ba;
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn5 {
-  background: url("../../assets/images/icons/home-page/quick-access-5.svg"), #04a6c2;
-  background-position: calc(100% - 24px) center;
-  background-repeat: no-repeat;
+    background: url("../../assets/images/icons/home-page/quick-access-5.svg"),
+        #04a6c2;
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
 }
 .container .pageContent .quickAccessSection .quickAccessBtns .quickAccessBtn6 {
-  background: url("../../assets/images/icons/home-page/quick-access-6.svg"), #00b2ca;
-  background-position: calc(100% - 24px) center;
-  background-repeat: no-repeat;
+    background: url("../../assets/images/icons/home-page/quick-access-6.svg"),
+        #00b2ca;
+    background-position: calc(100% - 24px) center;
+    background-repeat: no-repeat;
 }
 .container .pageContent .usersList {
-  width: calc(100% - 60px);
-  border-radius: 8px;
-  background-color: white;
-  margin: 32px;
-  padding-bottom: 48px;
+    width: calc(100% - 60px);
+    border-radius: 8px;
+    background-color: white;
+    margin: 32px;
+    padding-bottom: 48px;
 }
 .container .pageContent .usersList .topSection {
-  padding: 24px 24px 32px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #d9d9d9;
+    padding: 24px 24px 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d9d9d9;
 }
 .container .pageContent .usersList .topSection .sectionTitle {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 34.55px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34.55px;
 }
 .container .pageContent .usersList .topSection .addUserBtn {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 27.64px;
-  cursor: pointer;
-  color: white;
-  font-family: IRANYekanFN;
-  border-radius: 5px;
-  padding: 10px 56px 10px 24px;
-  border: none;
-  background: url("../../assets/images/icons/home-page/add-user-icon.svg"), #321fdb;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 24px);
-  background-size: 23px;
-  transition: background-color 0.15s;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.64px;
+    cursor: pointer;
+    color: white;
+    font-family: IRANYekanFN;
+    border-radius: 5px;
+    padding: 10px 56px 10px 24px;
+    border: none;
+    background: url("../../assets/images/icons/home-page/add-user-icon.svg"),
+        #321fdb;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 24px);
+    background-size: 23px;
+    transition: background-color 0.15s;
 }
 .container .pageContent .usersList .topSection .addUserBtn:hover {
-  background-color: #3521e6;
+    background-color: #3521e6;
 }
 .container .pageContent .usersList .topSection .addUserBtn:active {
-  background-color: #301ed2;
+    background-color: #301ed2;
 }
 .container .pageContent .usersList .userTableContainer {
-  overflow-x: auto;
+    overflow-x: auto;
 }
 .container .pageContent .usersList .userTableContainer .userTable {
-  min-width: 560px;
+    min-width: 560px;
 }
 .container .pageContent .usersList .userTableContainer .userTable .filterItems {
-  display: grid;
-  grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
-  gap: 0 17px;
-  padding: 0 48px;
-  border-bottom: 1px solid #d9d9d9;
+    display: grid;
+    grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
+    gap: 0 17px;
+    padding: 0 48px;
+    border-bottom: 1px solid #d9d9d9;
 }
-.container .pageContent .usersList .userTableContainer .userTable .filterItems input {
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid #707070;
-  outline: none;
-  height: 32px;
-  padding: 3px 5px;
-  margin: 12px 0;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .filterItems
+    input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #707070;
+    outline: none;
+    height: 32px;
+    padding: 3px 5px;
+    margin: 12px 0;
 }
-.container .pageContent .usersList .userTableContainer .userTable .filterItems div {
-  background: url("../../assets/images/icons/home-page/swap-icon.svg");
-  background-position: calc(100% - 8px) center;
-  background-size: 24px;
-  background-repeat: no-repeat;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 24.18px;
-  height: 48px;
-  padding: 14px 38px 0 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .filterItems
+    div {
+    background: url("../../assets/images/icons/home-page/swap-icon.svg");
+    background-position: calc(100% - 8px) center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24.18px;
+    height: 48px;
+    padding: 14px 38px 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.container .pageContent .usersList .userTableContainer .userTable .filterItems .filterFiller {
-  background: none;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .filterItems
+    .filterFiller {
+    background: none;
 }
-.container .pageContent .usersList .userTableContainer .userTable .userList .userRow {
-  display: grid;
-  grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
-  grid-template-rows: 56px;
-  padding: 0 48px;
-  gap: 0 17px;
-  border-bottom: 1px solid #d9d9d9;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .userList
+    .userRow {
+    display: grid;
+    grid-template-columns: 56fr 213fr 166fr 183fr 127fr 186fr;
+    grid-template-rows: 56px;
+    padding: 0 48px;
+    gap: 0 17px;
+    border-bottom: 1px solid #d9d9d9;
 }
-.container .pageContent .usersList .userTableContainer .userTable .userList .userRow:nth-child(odd) {
-  background-color: #eeeeee;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .userList
+    .userRow:nth-child(odd) {
+    background-color: #eeeeee;
 }
-.container .pageContent .usersList .userTableContainer .userTable .userList .userRow div {
-  padding-top: 14px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .userList
+    .userRow
+    div {
+    padding-top: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-.container .pageContent .usersList .userTableContainer .userTable .userList .userRow .userImg {
-  width: 40px;
-  height: 40px;
-  padding-top: 0;
-  margin-top: 8px;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .userList
+    .userRow
+    .userImg {
+    width: 40px;
+    height: 40px;
+    padding-top: 0;
+    margin-top: 8px;
 }
-.container .pageContent .usersList .userTableContainer .userTable .userList .userRow .userImg div {
-  width: 100%;
-  height: 100%;
-  background: #d9d9d9;
-  border-radius: 50%;
-  flex-shrink: 0;
-  padding-top: 0;
+.container
+    .pageContent
+    .usersList
+    .userTableContainer
+    .userTable
+    .userList
+    .userRow
+    .userImg
+    div {
+    width: 100%;
+    height: 100%;
+    background: #d9d9d9;
+    border-radius: 50%;
+    flex-shrink: 0;
+    padding-top: 0;
 }
 .container .pageContent .tableNav {
-  margin: 43px auto 0;
-  width: 313px;
-  width: min(313px, 80%);
-  height: 40px;
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
+    margin: 43px auto 0;
+    width: 313px;
+    width: min(313px, 80%);
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
 }
 
 @media (max-width: 1435px) {
-  .container:not(.closeMenu) .quickAccessBtns {
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(3, 1fr) !important;
-    gap: 14px !important;
-  }
+    .container:not(.closeMenu) .quickAccessBtns {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        gap: 14px !important;
+    }
 }
 @media (max-width: 1075px) {
-  .container:not(.closeMenu) .quickAccessBtns {
-    grid-template-columns: repeat(1, 1fr) !important;
-    grid-template-rows: repeat(6, 1fr) !important;
-    gap: 10px !important;
-  }
+    .container:not(.closeMenu) .quickAccessBtns {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+        gap: 10px !important;
+    }
 }
 @media (max-width: 1240px) {
-  .container.closeMenu .quickAccessBtns {
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(3, 1fr) !important;
-    gap: 14px !important;
-  }
+    .container.closeMenu .quickAccessBtns {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        gap: 14px !important;
+    }
 }
 @media (max-width: 880px) {
-  .container.closeMenu .quickAccessBtns {
-    grid-template-columns: repeat(1, 1fr) !important;
-    grid-template-rows: repeat(6, 1fr) !important;
-    gap: 10px !important;
-  }
+    .container.closeMenu .quickAccessBtns {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(6, 1fr) !important;
+        gap: 10px !important;
+    }
 }
 @media (max-width: 1150px) {
-  .container:not(.closeMenu) .filterItems div {
-    background: none !important;
-    padding: 14px 5px 0 0 !important;
-  }
+    .container:not(.closeMenu) .filterItems div {
+        background: none !important;
+        padding: 14px 5px 0 0 !important;
+    }
 }
 @media (max-width: 940px) {
-  .container:not(.closeMenu) .filterItems {
-    padding: 0 14px !important;
-    gap: 0 8px !important;
-  }
-  .container:not(.closeMenu) .userRow {
-    padding: 0 14px !important;
-    gap: 0 8px !important;
-  }
+    .container:not(.closeMenu) .filterItems {
+        padding: 0 14px !important;
+        gap: 0 8px !important;
+    }
+    .container:not(.closeMenu) .userRow {
+        padding: 0 14px !important;
+        gap: 0 8px !important;
+    }
 }
 @media (max-width: 947px) {
-  .container.closeMenu .filterItems div {
-    background: none !important;
-    padding: 14px 5px 0 0 !important;
-  }
+    .container.closeMenu .filterItems div {
+        background: none !important;
+        padding: 14px 5px 0 0 !important;
+    }
 }
 @media (max-width: 775px) {
-  .container.closeMenu .filterItems {
-    padding: 0 14px !important;
-    gap: 0 8px !important;
-  }
-  .container.closeMenu .userRow {
-    padding: 0 14px !important;
-    gap: 0 8px !important;
-  }
+    .container.closeMenu .filterItems {
+        padding: 0 14px !important;
+        gap: 0 8px !important;
+    }
+    .container.closeMenu .userRow {
+        padding: 0 14px !important;
+        gap: 0 8px !important;
+    }
 }
-@media (max-width: 910px) {
-  .container {
-    margin-right: 70px !important;
-  }
-  .container .quickAccessSection {
-    margin-top: 93px !important;
-  }
+@media (max-width: 1100px) {
+    .container {
+        margin-right: 70px !important;
+    }
+    .container .quickAccessSection {
+        margin-top: 93px !important;
+    }
 }
 @media (max-width: 480px) {
-  .container .quickAccessSection {
-    padding: 12px 12px 16px !important;
-    margin: 82px 15px 0 !important;
-    width: calc(100% - 30px) !important;
-  }
-  .container .quickAccessSection .quickAccessHeader {
-    font-size: 16px !important;
-  }
-  .container .quickAccessSection .quickAccessBtns div {
-    font-size: 14px !important;
-    background-image: none !important;
-    padding-right: 16px !important;
-    padding-top: 14px !important;
-    height: 60px !important;
-  }
-  .container .quickAccessSection .quickAccessBtns div::after {
-    top: 23px !important;
-  }
-  .container .usersList {
-    width: calc(100% - 30px) !important;
-    padding-bottom: 20px !important;
-    margin: 16px !important;
-  }
-  .container .usersList .topSection {
-    padding: 12px 12px 16px !important;
-  }
-  .container .usersList .topSection div,
-  .container .usersList .topSection button {
-    font-size: 16px !important;
-  }
-  .container .usersList .addUserBtn {
-    background-image: none !important;
-    padding: 8px 18px !important;
-  }
-  .container .usersList .tableNav {
-    margin-top: 20px !important;
-  }
-}/*# sourceMappingURL=HomePage.module.css.map */
+    .container .quickAccessSection {
+        padding: 12px 12px 16px !important;
+        margin: 82px 15px 0 !important;
+        width: calc(100% - 30px) !important;
+    }
+    .container .quickAccessSection .quickAccessHeader {
+        font-size: 16px !important;
+    }
+    .container .quickAccessSection .quickAccessBtns div {
+        font-size: 14px !important;
+        background-image: none !important;
+        padding-right: 16px !important;
+        padding-top: 14px !important;
+        height: 60px !important;
+    }
+    .container .quickAccessSection .quickAccessBtns div::after {
+        top: 23px !important;
+    }
+    .container .usersList {
+        width: calc(100% - 30px) !important;
+        padding-bottom: 20px !important;
+        margin: 16px !important;
+    }
+    .container .usersList .topSection {
+        padding: 12px 12px 16px !important;
+    }
+    .container .usersList .topSection div,
+    .container .usersList .topSection button {
+        font-size: 16px !important;
+    }
+    .container .usersList .addUserBtn {
+        background-image: none !important;
+        padding: 8px 18px !important;
+    }
+    .container .usersList .tableNav {
+        margin-top: 20px !important;
+    }
+} /*# sourceMappingURL=HomePage.module.css.map */

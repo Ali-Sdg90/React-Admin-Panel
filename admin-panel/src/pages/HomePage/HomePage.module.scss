@@ -261,7 +261,7 @@
     }
 }
 
-@media (max-width: 1075px) {
+@media (max-width: 880px) {
     .container:not(.closeMenu) {
         .quickAccessBtns {
             grid-template-columns: repeat(1, 1fr) !important;
@@ -274,7 +274,7 @@
 // Side Menu Close
 
 @media (max-width: 1240px) {
-    .container.closeMenu {
+    .container {
         .quickAccessBtns {
             grid-template-columns: repeat(2, 1fr) !important;
             grid-template-rows: repeat(3, 1fr) !important;
@@ -293,22 +293,8 @@
     }
 }
 
-@media (max-width: 940px) {
-    .container:not(.closeMenu) {
-        .filterItems {
-            padding: 0 14px !important;
-            gap: 0 8px !important;
-        }
-
-        .userRow {
-            padding: 0 14px !important;
-            gap: 0 8px !important;
-        }
-    }
-}
-
 @media (max-width: 920px) {
-    .container.closeMenu {
+    .container {
         .filterItems {
             padding: 0 14px !important;
             gap: 0 8px !important;
@@ -323,7 +309,7 @@
 
 // Fixed Side Menu
 
-@media (max-width: 910px) {
+@media (max-width: 1100px) {
     .container {
         margin-right: 70px !important;
 

@@ -18,7 +18,6 @@
 
         .profileSection {
             margin: 32px;
-            // min-height: calc(100vh - 165px);
             background-color: white;
             border-radius: 8px;
             padding-bottom: 36px;
@@ -56,7 +55,7 @@
                             border-radius: 5px;
                             border: none;
                             cursor: pointer;
-                            font-family: IRANYekanFN;
+                            font-family: "IRANYekanFN";
                             padding-right: 30px;
                             transition: transform 0.15s;
 
@@ -293,7 +292,7 @@
 
 // Fixed Side Menu
 
-@media (max-width: 910px) {
+@media (max-width: 1100px) {
     .container {
         margin-right: 70px !important;
 
@@ -375,11 +374,11 @@
 }
 
 @keyframes profileBtnsIntro {
-    0%{
+    0% {
         opacity: 0;
         transform: translateX(-10px);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: translateX(0px);
     }

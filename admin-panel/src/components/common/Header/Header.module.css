@@ -1,63 +1,65 @@
 .container {
-  height: 64px;
-  background-color: white;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 16px 0 40px;
-  direction: rtl;
-  width: 100%;
-  transition: width 0.2s;
+    height: 64px;
+    background-color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 40px;
+    direction: rtl;
+    width: 100%;
+    transition: width 0.2s;
 }
 .container .rightSection {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  background: url("../../../assets/images/icons/header/menu-icon.svg") center/24px no-repeat;
-  cursor: pointer;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    background: url("../../../assets/images/icons/header/menu-icon.svg")
+        center/24px no-repeat;
+    cursor: pointer;
 }
 .container .leftSection {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
 }
 .container .leftSection .userImg {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
 }
 .container .leftSection .userName {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 27.64px;
-  white-space: nowrap;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.64px;
+    white-space: nowrap;
 }
 .container .leftSection .downArrow {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  background: url("../../../assets/images/icons/header/down-arrow-icon.svg") center/cover no-repeat;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: url("../../../assets/images/icons/header/down-arrow-icon.svg")
+        center/cover no-repeat;
 }
 
-@media (max-width: 910px) {
-  .container.closeMenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: calc(100% - 70px) !important;
-    z-index: 10;
-  }
+@media (max-width: 1100px) {
+    .container.closeMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 70px) !important;
+        z-index: 10;
+    }
 }
-@media (max-width: 910px) {
-  .container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: calc(100% - 270px) !important;
-    z-index: 10;
-  }
-}/*# sourceMappingURL=header.module.css.map */
+@media (max-width: 1100px) {
+    .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 270px) !important;
+        z-index: 10;
+    }
+} /*# sourceMappingURL=header.module.css.map */

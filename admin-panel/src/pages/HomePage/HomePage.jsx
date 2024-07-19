@@ -24,7 +24,7 @@ const HomePage = () => {
         userType: "",
     });
     const [sortMode, setSortMode] = useState({
-        mode: "phoneNumber",
+        mode: "",
         isIncrease: false,
     });
 

@@ -1,150 +1,174 @@
 .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 }
 .container .loginSection {
-  border: 1px solid #989898;
-  width: 850px;
-  height: 322px;
-  border-radius: 8px;
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: hidden;
-  margin: 10px;
+    border: 1px solid #989898;
+    width: 850px;
+    height: 322px;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    margin: 10px;
 }
 .container .loginSection .leftSide {
-  width: min(50%, 400px);
-  height: 100%;
-  background: #3c4b64;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+    width: min(50%, 400px);
+    height: 100%;
+    background: #3c4b64;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 .container .loginSection .leftSide .leftSideText {
-  font-family: "IRANYekanFN";
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 110.55px;
-  color: #ffffff;
-  background: url("../../assets/images/biztak-logo.svg");
-  background-size: 82px;
-  background-repeat: no-repeat;
-  background-position: right;
-  padding-right: 91px;
-  margin-right: 6px;
+    font-family: "IRANYekanFN";
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 110.55px;
+    color: #ffffff;
+    background: url("../../assets/images/biztalk-logo.svg");
+    background-size: 82px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 91px;
+    margin-right: 6px;
 }
 .container .loginSection .rightSide {
-  background: white;
-  width: 100%;
-  padding: 50px 45px;
-  direction: rtl;
+    background: white;
+    width: 100%;
+    padding: 50px 45px;
+    direction: rtl;
 }
 .container .loginSection .rightSide .sectionHeader {
-  font-family: IRANYekanFN;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 62.18px;
-  color: black;
+    font-family: IRANYekanFN;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 62.18px;
+    color: black;
 }
 .container .loginSection .rightSide .formContainer {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 8px;
-  margin: 16px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    margin: 16px 0;
 }
 .container .loginSection .rightSide .formContainer .usernameContainer,
 .container .loginSection .rightSide .formContainer .passwordContainer {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative;
 }
 .container .loginSection .rightSide .formContainer .usernameContainer input,
 .container .loginSection .rightSide .formContainer .passwordContainer input {
-  width: 100%;
-  height: 40px;
-  background-color: #ebedef;
-  border: 1px solid #989898;
-  transition: background-color 0.15s;
-  padding-right: 10px;
-  font-size: 18px;
+    width: 100%;
+    height: 40px;
+    background-color: #ebedef;
+    border: 1px solid #989898;
+    transition: background-color 0.15s;
+    padding-right: 10px;
+    font-size: 18px;
 }
-.container .loginSection .rightSide .formContainer .usernameContainer input:focus,
-.container .loginSection .rightSide .formContainer .passwordContainer input:focus {
-  outline: none;
+.container
+    .loginSection
+    .rightSide
+    .formContainer
+    .usernameContainer
+    input:focus,
+.container
+    .loginSection
+    .rightSide
+    .formContainer
+    .passwordContainer
+    input:focus {
+    outline: none;
 }
-.container .loginSection .rightSide .formContainer .usernameContainer input:hover,
-.container .loginSection .rightSide .formContainer .passwordContainer input:hover {
-  background-color: rgb(240, 242, 244);
+.container
+    .loginSection
+    .rightSide
+    .formContainer
+    .usernameContainer
+    input:hover,
+.container
+    .loginSection
+    .rightSide
+    .formContainer
+    .passwordContainer
+    input:hover {
+    background-color: rgb(240, 242, 244);
 }
 .container .loginSection .rightSide .formContainer .usernameContainer::after,
 .container .loginSection .rightSide .formContainer .passwordContainer::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 48px;
-  height: 100%;
-  box-sizing: border-box;
-  background: url("../../assets/images/icons/login/username-icon.svg") center/16px no-repeat, #9da5b1;
-  border: 1px solid #989898;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 100%;
+    box-sizing: border-box;
+    background: url("../../assets/images/icons/login/username-icon.svg")
+            center/16px no-repeat,
+        #9da5b1;
+    border: 1px solid #989898;
 }
 .container .loginSection .rightSide .formContainer .passwordContainer::after {
-  background: url("../../assets/images/icons/login/password-icon.svg") center/23px no-repeat, #9da5b1;
+    background: url("../../assets/images/icons/login/password-icon.svg")
+            center/23px no-repeat,
+        #9da5b1;
 }
 .container .loginSection .bottomSection {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .container .loginSection .bottomSection .submitBtn {
-  font-family: "IRANYekanFN";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 27.64px;
-  padding: 6px 24px;
-  background: #321fdb;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.15s;
+    font-family: "IRANYekanFN";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.64px;
+    padding: 6px 24px;
+    background: #321fdb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s;
 }
 .container .loginSection .bottomSection .submitBtn:hover {
-  background: #3522e7;
+    background: #3522e7;
 }
 .container .loginSection .bottomSection .submitBtn:active {
-  background: #311fd7;
+    background: #311fd7;
 }
 .container .loginSection .bottomSection .forgerPassword {
-  font-family: IRANYekanFN;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20.73px;
-  color: #321fdb;
-  cursor: pointer;
-  transition: color 0.15s;
-  white-space: nowrap;
-  padding-right: 10px;
+    font-family: IRANYekanFN;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20.73px;
+    color: #321fdb;
+    cursor: pointer;
+    transition: color 0.15s;
+    white-space: nowrap;
+    padding-right: 10px;
 }
 .container .loginSection .bottomSection .forgerPassword:hover {
-  color: #2d1cc6;
+    color: #2d1cc6;
 }
 
 @media (max-width: 680px) {
-  .loginSection {
-    display: flex;
-    flex-flow: column nowrap !important;
-    width: 100% !important;
-    height: 644px !important;
-  }
-  .leftSide {
-    height: 50% !important;
-    width: 100% !important;
-  }
-}/*# sourceMappingURL=Login.module.css.map */
+    .loginSection {
+        display: flex;
+        flex-flow: column nowrap !important;
+        width: 100% !important;
+        height: 644px !important;
+    }
+    .leftSide {
+        height: 50% !important;
+        width: 100% !important;
+    }
+} /*# sourceMappingURL=Login.module.css.map */
