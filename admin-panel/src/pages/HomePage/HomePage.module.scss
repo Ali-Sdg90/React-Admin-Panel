@@ -153,9 +153,10 @@
 
             .userTableContainer {
                 overflow-x: auto;
+                width: 100%;
 
                 .userTable {
-                    min-width: 560px;
+                    min-width: 710px;
 
                     .filterItems {
                         display: grid;
@@ -292,19 +293,6 @@
     }
 }
 
-// Users Table Open
-
-@media (max-width: 1150px) {
-    .container:not(.closeMenu) {
-        .filterItems {
-            div {
-                background: none !important;
-                padding: 14px 5px 0 0 !important;
-            }
-        }
-    }
-}
-
 @media (max-width: 940px) {
     .container:not(.closeMenu) {
         .filterItems {
@@ -319,20 +307,7 @@
     }
 }
 
-// Users Table Close
-
-@media (max-width: 947px) {
-    .container.closeMenu {
-        .filterItems {
-            div {
-                background: none !important;
-                padding: 14px 5px 0 0 !important;
-            }
-        }
-    }
-}
-
-@media (max-width: 775px) {
+@media (max-width: 920px) {
     .container.closeMenu {
         .filterItems {
             padding: 0 14px !important;

@@ -5,11 +5,13 @@ import HomePage from "../pages/HomePage/HomePage";
 import UserProfile from "../pages/UserProfile/UserProfile";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import Toastify from "../components/else/Toastify/Toastify";
+import ScrollToTop from "../components/else/ScrollToTop/ScrollToTop";
 
 const AppRoutes = () => {
     return (
         <div>
             <Toastify />
+            <ScrollToTop />
             <Routes>
                 <Route path="React-Admin-Panel/login" element={<Login />} />
                 <Route

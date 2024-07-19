@@ -7,6 +7,9 @@ import SideMenu from "../../components/common/SideMenu/SideMenu";
 import Header from "../../components/common/Header/Header";
 import Footer from "../../components/common/Footer/Footer";
 
+import upArrow from "../../assets/images/icons/home-page/up-arrow.svg";
+import downArrow from "../../assets/images/icons/home-page/down-arrow.svg";
+
 const HomePage = () => {
     const { localToken, isSideMenuClose } = useContext(AppContext);
 
@@ -19,6 +22,10 @@ const HomePage = () => {
         phoneNumber: "",
         statusTitle: "",
         userType: "",
+    });
+    const [sortMode, setSortMode] = useState({
+        mode: "phoneNumber",
+        isIncrease: false,
     });
 
     const navigate = useNavigate();
@@ -87,6 +94,60 @@ const HomePage = () => {
         }
     }, [searchInputs, pageData]);
 
+    const sortBtnStyle = (mode) => {
+        if (sortMode["mode"] === mode) {
+            if (sortMode.isIncrease) {
+                return {
+                    backgroundImage: `url(${upArrow})`,
+                    backgroundSize: "16px",
+                };
+            } else {
+                return {
+                    backgroundImage: `url(${downArrow})`,
+                    backgroundSize: "16px",
+                };
+            }
+        } else {
+            return {};
+        }
+    };
+
+    const sortFunction = (array, mode) => {
+        array.sort((a, b) => {
+            let nameA = a[mode].toLowerCase();
+            let nameB = b[mode].toLowerCase();
+            if (nameA < nameB) return 1;
+            if (nameA > nameB) return -1;
+            return 0;
+        });
+
+        if (sortMode.isIncrease) {
+            array = array.reverse();
+        }
+
+        return array;
+    };
+
+    const sortClickHandler = (mode) => {
+        setSortMode((prevState) => {
+            if (prevState.mode === mode) {
+                return {
+                    mode: mode,
+                    isIncrease: !prevState.isIncrease,
+                };
+            } else {
+                return {
+                    mode: mode,
+                    isIncrease: true,
+                };
+            }
+        });
+
+        const sortedUsers = sortFunction(showUsers, mode);
+
+        setShowUsers(sortedUsers);
+    };
+
     return (
         <div
             className={`${Style.container} ${
@@ -129,11 +190,40 @@ const HomePage = () => {
                         <div className={Style.userTable}>
                             <div className={Style.filterItems}>
                                 <span></span>
-                                <div>نام و نام خانوادگی</div>
-                                <div>نام کاربری</div>
-                                <div>شماره موبایل</div>
-                                <div>وضعیت</div>
-                                <div>نوع پروفایل</div>
+                                <div
+                                    style={sortBtnStyle("fullName")}
+                                    onClick={() => sortClickHandler("fullName")}
+                                >
+                                    نام و نام خانوادگی
+                                </div>
+                                <div
+                                    style={sortBtnStyle("userName")}
+                                    onClick={() => sortClickHandler("userName")}
+                                >
+                                    نام کاربری
+                                </div>
+                                <div
+                                    style={sortBtnStyle("phoneNumber")}
+                                    onClick={() =>
+                                        sortClickHandler("phoneNumber")
+                                    }
+                                >
+                                    شماره موبایل
+                                </div>
+                                <div
+                                    style={sortBtnStyle("statusTitle")}
+                                    onClick={() =>
+                                        sortClickHandler("statusTitle")
+                                    }
+                                >
+                                    وضعیت
+                                </div>
+                                <div
+                                    style={sortBtnStyle("userType")}
+                                    onClick={() => sortClickHandler("userType")}
+                                >
+                                    نوع پروفایل
+                                </div>
                             </div>
 
                             <div className={Style.filterItems}>
@@ -253,7 +343,7 @@ const HomePage = () => {
                                                 </div>
                                             );
                                         } else {
-                                            console.log(">>>", index)
+                                            console.log(">>>", index);
                                         }
                                     })
                                 ) : (
