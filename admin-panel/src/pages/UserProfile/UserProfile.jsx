@@ -16,7 +16,7 @@ const UserProfile = () => {
 
     const navigate = useNavigate();
 
-    const [isRecipientAdvisor, setIsRecipientAdvisor] = useState(false);
+    const [isRecipientAdvisor, setIsRecipientAdvisor] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -157,18 +157,28 @@ const UserProfile = () => {
                         </div>
                     </div>
 
-                    <div className={Style.profileBtns}>
-                        <div className={Style.profileBtn1}>اطلاعات کاربر</div>
-                        <div className={Style.profileBtn2}>کیف پول</div>
-                        <div className={Style.profileBtn3}>تقویم جلسات</div>
-                        <div className={Style.profileBtn4}>پیگیری کارت‌</div>
-                        <div className={Style.profileBtn5}>لیست جلسات</div>
-                        <div className={Style.profileBtn6}>تراکنش ها</div>
-                        <div className={Style.profileBtn7}>
-                            کد تخفیف اختصاصی
+                    {isRecipientAdvisor ? (
+                        <div className={Style.profileBtns}>
+                            <div className={Style.profileBtn1}>
+                                اطلاعات کاربر
+                            </div>
+                            <div className={Style.profileBtn2}>کیف پول</div>
+                            <div className={Style.profileBtn3}>تقویم جلسات</div>
+                            <div className={Style.profileBtn4}>
+                                پیگیری کارت‌
+                            </div>
+                            <div className={Style.profileBtn5}>لیست جلسات</div>
+                            <div className={Style.profileBtn6}>تراکنش ها</div>
+                            <div className={Style.profileBtn7}>
+                                کد تخفیف اختصاصی
+                            </div>
+                            <div className={Style.profileBtn8}>
+                                نظرات ثبت شده
+                            </div>
                         </div>
-                        <div className={Style.profileBtn8}>نظرات ثبت شده</div>
-                    </div>
+                    ) : (
+                        <div className={Style.whiteSpace}></div>
+                    )}
                 </div>
                 <Footer />
             </div>

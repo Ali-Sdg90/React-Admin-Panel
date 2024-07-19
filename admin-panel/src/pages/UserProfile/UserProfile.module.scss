@@ -189,6 +189,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 24px 32px;
+                animation: profileBtnsIntro 0.3s forwards;
 
                 div {
                     height: 80px;
@@ -272,6 +273,10 @@
                         #00b2ca;
                     @include background-styles-user-btn;
                 }
+            }
+
+            .whiteSpace {
+                height: 472px;
             }
         }
     }
@@ -366,5 +371,16 @@
                 height: 50px !important;
             }
         }
+    }
+}
+
+@keyframes profileBtnsIntro {
+    0%{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

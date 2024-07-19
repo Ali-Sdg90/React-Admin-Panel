@@ -11,7 +11,15 @@ const HomePage = () => {
     const { localToken, isSideMenuClose } = useContext(AppContext);
 
     const [pageData, setPageData] = useState({});
+    const [showUsers, setShowUsers] = useState([]);
     const [pageNumber, setPageNumber] = useState(1);
+    const [searchInputs, setSearchInputs] = useState({
+        fullName: "",
+        userName: "",
+        phoneNumber: "",
+        statusTitle: "",
+        userType: "",
+    });
 
     const navigate = useNavigate();
 
@@ -36,7 +44,7 @@ const HomePage = () => {
                         }
                     );
 
-                    // console.log("DATA: ", response.data.data);
+                    console.log("DATA: ", response.data.data);
 
                     setPageData(response.data.data);
                 } catch (err) {
@@ -53,6 +61,31 @@ const HomePage = () => {
     const userClickHAndler = (id) => {
         navigate(`/React-Admin-Panel/user-profile/${id}`);
     };
+
+    const searchUser = (e, mode) => {
+        console.log(e.target.value, mode);
+
+        setSearchInputs((prevState) => ({
+            ...prevState,
+            [mode]: e.target.value,
+        }));
+    };
+
+    useEffect(() => {
+        if (Object.keys(pageData).length > 0) {
+            let suitableUsers = pageData.users.filter((user) =>
+                Object.keys(searchInputs).every((key) =>
+                    user[key]
+                        .toLowerCase()
+                        .includes(searchInputs[key].toLowerCase())
+                )
+            );
+
+            console.log("suitableUsers >>", suitableUsers);
+
+            setShowUsers(suitableUsers);
+        }
+    }, [searchInputs, pageData]);
 
     return (
         <div
@@ -105,11 +138,40 @@ const HomePage = () => {
 
                             <div className={Style.filterItems}>
                                 <span></span>
-                                <input type="text" autoComplete="none" />
-                                <input type="text" autoComplete="none" />
-                                <input type="text" autoComplete="none" />
-                                <input type="text" autoComplete="none" />
-                                <input type="text" autoComplete="none" />
+                                <input
+                                    type="text"
+                                    autoComplete="none"
+                                    onChange={(e) => searchUser(e, "fullName")}
+                                    value={searchInputs.fullName}
+                                />
+                                <input
+                                    type="text"
+                                    autoComplete="none"
+                                    onChange={(e) => searchUser(e, "userName")}
+                                    value={searchInputs.userName}
+                                />
+                                <input
+                                    type="text"
+                                    autoComplete="none"
+                                    onChange={(e) =>
+                                        searchUser(e, "phoneNumber")
+                                    }
+                                    value={searchInputs.phoneNumber}
+                                />
+                                <input
+                                    type="text"
+                                    autoComplete="none"
+                                    onChange={(e) =>
+                                        searchUser(e, "statusTitle")
+                                    }
+                                    value={searchInputs.statusTitle}
+                                />
+                                <input
+                                    type="text"
+                                    autoComplete="none"
+                                    onChange={(e) => searchUser(e, "userType")}
+                                    value={searchInputs.userType}
+                                />
                             </div>
 
                             <div className={Style.userList}>
@@ -125,10 +187,10 @@ const HomePage = () => {
                             </div> */}
 
                                 {Object.keys(pageData).length > 0 ? (
-                                    pageData.users.map((userData, index) => {
+                                    showUsers.map((userData, index) => {
                                         if (
-                                            index < pageNumber * 10 &&
-                                            index > (pageNumber - 1) * 10
+                                            index <= pageNumber * 8 &&
+                                            index >= (pageNumber - 1) * 8
                                         ) {
                                             return (
                                                 <div
@@ -190,6 +252,8 @@ const HomePage = () => {
                                                     </div>
                                                 </div>
                                             );
+                                        } else {
+                                            console.log(">>>", index)
                                         }
                                     })
                                 ) : (
